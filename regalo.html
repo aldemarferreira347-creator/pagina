@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día de la Mujer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&amp;family=Playfair+Display:ital,wght@0,600;1,600&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff5e9c;
+            --secondary: #ff8e5e;
+            --background: #fff0f5;
+            --text-dark: #333;
+            --text-light: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        /* Animated Background Gradient */
+        .bg-animated {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 4rem 3rem;
+            margin: 2rem;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            background: linear-gradient(135deg, #ff5e9c, #ff8e5e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #ff5e9c;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: fadeIn 1.5s ease forwards 0.5s;
+            opacity: 0;
+        }
+
+        .message-box {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(255, 94, 156, 0.08);
+            margin-bottom: 2.5rem;
+            position: relative;
+            animation: fadeIn 1.5s ease forwards 0.8s;
+            opacity: 0;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .message-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(255, 94, 156, 0.15);
+        }
+
+        .message-box p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .message-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #777;
+            font-style: italic;
+            animation: fadeIn 1.5s ease forwards 1.1s;
+            opacity: 0;
+        }
+
+        .signatures {
+            margin-top: 0.8rem;
+            font-weight: 600;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #ff5e9c, #ff8e5e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Playfair Display', serif;
+            font-style: normal;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Floating elements */
+        .floating-element {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.6;
+            animation: floatAnim 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes floatAnim {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(15deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        /* Heart Generator Styles */
+        .heart-section {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            box-shadow: inset 0 0 10px rgba(255, 94, 156, 0.1);
+        }
+
+        .heart-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .heart-section input {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #ffb6c1;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-family: inherit;
+            outline: none;
+            color: var(--text-dark);
+            min-width: 250px;
+            transition: border-color 0.3s;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .heart-section input:focus {
+            border-color: var(--primary);
+        }
+
+        .heart-section button {
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        .heart-section button:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 94, 156, 0.4);
+        }
+
+        .heart-section button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .heart-output {
+            margin-top: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            line-height: 1.1;
+            color: #e91e63;
+            white-space: pre;
+            text-align: left;
+            display: inline-block;
+            font-weight: bold;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        .heart-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .heart-message {
+            margin-top: 1.5rem;
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            display: none;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 2.5rem 1.5rem;
+                margin: 1.5rem;
+            }
+
+            .heart-output {
+                font-size: 7.5px;
+                /* Adjust size for mobile to fit the wide ASCII art */
+            }
+
+            .input-group {
+                flex-direction: column;
+            }
+
+            .message-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .message-box p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-animated"></div>
+
+    <div id="particles"></div>
+
+    <div class="container">
+        <h1>¡Feliz Día de la Mujer!</h1>
+        <div class="subtitle">A dos amigas increíbles: Sofía y Phaulynni</div>
+
+        <div class="message-box">
+            <p>Hoy queremos tomar un momento para celebrar a dos mujeres maravillosas. Más allá de lo especiales que son
+                individualmente, lo que más admiramos es <span class="highlight">la hermosa amistad que
+                    comparten</span>.</p>
+            <p>Es inspirador ver cómo se apoyan, cómo su energía se complementa y cómo iluminan cualquier lugar cuando
+                están juntas. Una amistad tan sincera, cómplice y leal como la suya es un verdadero tesoro en estos
+                tiempos.</p>
+            <p>Por más aventuras, risas interminables y momentos compartidos. Sigan brillando como siempre lo hacen.</p>
+        </div>
+
+        <div class="heart-section">
+            <h3>Crea un detalle especial</h3>
+            <div class="input-group">
+                <input type="text" id="specialName" placeholder="Nombre de tu persona especial..." autocomplete="off">
+                <button id="generateHeartBtn">Generar Corazón</button>
+            </div>
+            <div class="heart-wrapper">
+                <div id="heartOutput" class="heart-output"></div>
+            </div>
+            <div id="heartMessage" class="heart-message"></div>
+        </div>
+
+        <div class="footer">
+            Hecha con mucho cariño por
+            <div class="signatures">Carlo y Aarón</div>
+        </div>
+    </div>
+
+    <script>
+        const particlesContainer = document.getElementById('particles');
+        const emojis = ['✨', '🌸', '💫', '💖', '🌺', '🌷'];
+
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'floating-element';
+            particle.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.top = `${Math.random() * 100}vh`;
+
+            const size = Math.random() * 1.5 + 1;
+            particle.style.fontSize = `${size}rem`;
+
+            particle.style.opacity = Math.random() * 0.5 + 0.3;
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+            particle.style.animationDuration = `${Math.random() * 5 + 4}s`;
+
+            particlesContainer.appendChild(particle);
+        }
+
+        // Heart Generator Logic
+        const heartTemplate = `
+    @@@@@@@@@@@@@       @@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@
+ @@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+       @@@@@@@@@@@@@@@@@@@@@@@@@@@
+        @@@@@@@@@@@@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@@@@@@
+          @@@@@@@@@@@@@@@@@@@@@
+           @@@@@@@@@@@@@@@@@@@
+            @@@@@@@@@@@@@@@@@
+             @@@@@@@@@@@@@@@
+              @@@@@@@@@@@@@
+               @@@@@@@@@@@
+                @@@@@@@@@
+                 @@@@@@@
+                  @@@@@
+                   @@@
+                    @
+
+                   @@@
+                 @@@@@@@
+                 @@@@@@@
+                   @@@
+`;
+
+        function romantizar(nombre) {
+            let corazon = heartTemplate;
+            const letras = nombre.split('');
+            if (letras.length === 0) return corazon;
+
+            let i = 0;
+            while (corazon.includes('@')) {
+                corazon = corazon.replace('@', letras[i % letras.length]);
+                i++;
+            }
+            return corazon;
+        }
+
+        const generateBtn = document.getElementById('generateHeartBtn');
+        const nameInput = document.getElementById('specialName');
+        const heartOutput = document.getElementById('heartOutput');
+        const heartMessage = document.getElementById('heartMessage');
+
+        generateBtn.addEventListener('click', async () => {
+            const nombreOriginal = nameInput.value.trim() || 'Amor';
+            const corazonFinal = romantizar(nombreOriginal);
+            const lineas = corazonFinal.split('\n');
+
+            generateBtn.disabled = true;
+            generateBtn.innerText = 'Formando corazón... ♥';
+            heartOutput.textContent = '';
+            heartMessage.style.display = 'none';
+
+            let currentText = '';
+            for (let i = 0; i < lineas.length; i++) {
+                currentText += lineas[i] + '\n';
+                heartOutput.textContent = currentText;
+
+                // Mostrar línea por línea con un pequeño retraso
+                if (lineas[i].trim() !== '') {
+                    await new Promise(r => setTimeout(r, 120));
+                }
+            }
+
+            const div = document.createElement('div');
+            div.textContent = `así de grande es mi aprecio por ustedes ${nombreOriginal}! ♥`;
+            heartMessage.innerHTML = '';
+            heartMessage.appendChild(div);
+            heartMessage.style.display = 'block';
+
+            generateBtn.disabled = false;
+            generateBtn.innerText = 'Generar Corazón';
+        });
+    </script>
+</body>
+
+</html>
