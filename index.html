@@ -683,6 +683,106 @@
                 font-size: 5px;
             }
         }
+
+        /* ─── WINNER SECTION ─── */
+        .winner-section {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .winner-box {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 30px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .winner-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold2);
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .winner-loader {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .spinner {
+            width: 45px;
+            height: 45px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--amber);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .winner-loading-text {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            animation: pulseText 1.5s infinite;
+        }
+
+        @keyframes pulseText {
+
+            0%,
+            100% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .winner-message {
+            display: none;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: #fce7f3;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .winner-focus {
+            display: block;
+            margin-top: 15px;
+            color: var(--rose);
+            font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(244, 63, 138, 0.3);
+            transform: scale(0.9);
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+
+        @keyframes popIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
@@ -859,6 +959,21 @@
                         me haces esos gestos que tanto amo ❣️.</p>
                     <span class="card-tag">🌟 Energía positiva</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ GANADORA SECTION ═══ -->
+    <section class="winner-section reveal">
+        <div class="winner-box" id="winnerBox">
+            <h2 class="winner-title" id="winnerTitle">La ganadora del puesto número 1 es:</h2>
+            <div class="winner-loader" id="winnerLoader">
+                <div class="spinner"></div>
+                <div class="winner-loading-text">Cargando...</div>
+            </div>
+            <div class="winner-message" id="winnerMessage">
+                La ganadora del puesto número 1 de mi corazón es:
+                <span class="winner-focus">isabela Quiñonez González ❣️</span>
             </div>
         </div>
     </section>
@@ -1098,8 +1213,28 @@
                 isaMessage.style.display = 'block';
             }
         });
+
+        // ── Winner Interaction Logic ──
+        const winnerBox = document.getElementById('winnerBox');
+        let winnerTriggered = false;
+
+        const winnerObserver = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting && !winnerTriggered) {
+                    winnerTriggered = true;
+                    // Start 5 second timer when section becomes visible
+                    setTimeout(() => {
+                        document.getElementById('winnerLoader').style.display = 'none';
+                        document.getElementById('winnerTitle').style.display = 'none';
+                        document.getElementById('winnerMessage').style.display = 'block';
+                    }, 5000);
+                }
+            });
+        }, { threshold: 0.6 });
+
+        winnerObserver.observe(winnerBox);
+
     </script>
 </body>
-
 
 </html>
