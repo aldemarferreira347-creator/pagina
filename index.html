@@ -783,6 +783,181 @@
                 transform: scale(1);
             }
         }
+
+        /* ─── WINNER DECORATIONS ─── */
+        .winner-box {
+            position: relative;
+            /* Ensure decorations stay attached */
+        }
+
+        .winner-dec-flower {
+            position: absolute;
+            font-size: 2.2rem;
+            filter: drop-shadow(0 4px 6px rgba(245, 197, 24, 0.4));
+            animation: gentleSway 4s ease-in-out infinite alternate;
+            z-index: 2;
+        }
+
+        .flower-1 {
+            top: -20px;
+            left: -20px;
+            animation-delay: 0s;
+            transform: rotate(-15deg);
+        }
+
+        .flower-2 {
+            bottom: -15px;
+            right: -25px;
+            animation-delay: 1s;
+            font-size: 2.5rem;
+            transform: rotate(15deg);
+        }
+
+        .flower-3 {
+            top: 40%;
+            left: -30px;
+            animation-delay: 2s;
+            font-size: 1.8rem;
+        }
+
+        .winner-dec-heart {
+            position: absolute;
+            font-size: 1.5rem;
+            color: var(--rose);
+            filter: drop-shadow(0 2px 4px rgba(244, 63, 138, 0.4));
+            animation: floatUpSlow 3s ease-in-out infinite alternate;
+            z-index: -1;
+        }
+
+        .heart-1 {
+            top: -30px;
+            right: 10%;
+            animation-delay: 0.5s;
+            font-size: 1.8rem;
+        }
+
+        .heart-2 {
+            bottom: -20px;
+            left: 15%;
+            animation-delay: 1.5s;
+            font-size: 1.2rem;
+        }
+
+        .heart-3 {
+            top: 20%;
+            right: -25px;
+            animation-delay: 2.5s;
+            font-size: 2rem;
+        }
+
+        @keyframes gentleSway {
+            to {
+                transform: translateY(-8px) rotate(5deg);
+            }
+        }
+
+        @keyframes floatUpSlow {
+            to {
+                transform: translateY(-12px) scale(1.1);
+            }
+        }
+
+        /* ─── TIMER SECTION ─── */
+        .timer-section {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timer-box {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(15px);
+            padding: 50px 40px;
+            border-radius: 30px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timer-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(244, 63, 138, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+            animation: rotateGradient 15s linear infinite;
+        }
+
+        @keyframes rotateGradient {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .timer-title {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            margin-bottom: 35px;
+            line-height: 1.4;
+        }
+
+        .timer-title span {
+            color: var(--rose);
+            font-weight: 700;
+        }
+
+        #contador {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .time-block {
+            background: rgba(15, 10, 30, 0.6);
+            border: 1px solid rgba(244, 63, 138, 0.2);
+            border-radius: 20px;
+            padding: 20px 15px;
+            min-width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .time-block:hover {
+            transform: translateY(-5px);
+            border-color: var(--rose);
+        }
+
+        .time-val {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--gold2);
+            line-height: 1;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(255, 224, 68, 0.4);
+        }
+
+        .time-label {
+            font-size: 0.8rem;
+            color: #fce7f3;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
     </style>
 </head>
 
@@ -966,6 +1141,15 @@
     <!-- ═══ GANADORA SECTION ═══ -->
     <section class="winner-section reveal">
         <div class="winner-box" id="winnerBox">
+            <!-- Decorations -->
+            <div class="winner-dec-flower flower-1">🌼</div>
+            <div class="winner-dec-flower flower-2">🌻</div>
+            <div class="winner-dec-flower flower-3">🌼</div>
+            <div class="winner-dec-heart heart-1">💖</div>
+            <div class="winner-dec-heart heart-2">💕</div>
+            <div class="winner-dec-heart heart-3">💗</div>
+            <!-- End Decorations -->
+
             <h2 class="winner-title" id="winnerTitle">La ganadora del puesto número 1 es:</h2>
             <div class="winner-loader" id="winnerLoader">
                 <div class="spinner"></div>
@@ -975,6 +1159,14 @@
                 La ganadora del puesto número 1 de mi corazón es:
                 <span class="winner-focus">isabela Quiñonez González ❣️</span>
             </div>
+        </div>
+    </section>
+
+    <!-- ═══ TIMER SECTION ═══ -->
+    <section class="timer-section reveal">
+        <div class="timer-box">
+            <h2 class="timer-title">Tiempo desde el <span>4 de agosto de 2025</span> ❤️</h2>
+            <div id="contador"></div>
         </div>
     </section>
 
@@ -1233,6 +1425,29 @@
         }, { threshold: 0.6 });
 
         winnerObserver.observe(winnerBox);
+
+        // ── Timer Logic ──
+        const fechaInicio = new Date("2025-08-04 00:00:00");
+
+        function actualizarContador() {
+            const ahora = new Date();
+            const diferencia = ahora - fechaInicio;
+
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+            const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+            const segundos = Math.floor((diferencia / 1000) % 60);
+
+            document.getElementById("contador").innerHTML = `
+                <div class="time-block"><span class="time-val">${dias}</span><span class="time-label">días</span></div>
+                <div class="time-block"><span class="time-val">${horas}</span><span class="time-label">horas</span></div>
+                <div class="time-block"><span class="time-val">${minutos}</span><span class="time-label">minutos</span></div>
+                <div class="time-block"><span class="time-val">${segundos}</span><span class="time-label">segundos</span></div>
+            `;
+        }
+
+        setInterval(actualizarContador, 1000);
+        actualizarContador();
 
     </script>
 </body>
