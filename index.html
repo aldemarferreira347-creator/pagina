@@ -604,7 +604,11 @@
             margin-bottom: 15px;
         }
 
-        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
         .winner-loading-text {
             color: #9ca3af;
@@ -670,9 +674,13 @@
             line-height: 1.4;
         }
 
-        .timer-title span { color: var(--rose); font-weight: 700; }
+        .timer-title span {
+            color: var(--rose);
+            font-weight: 700;
+        }
 
-        #contador, #contador2 {
+        #contador,
+        #contador2 {
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -818,11 +826,14 @@
         }
 
         @media (max-width: 500px) {
-            .heart-art { font-size: 5px; }
+            .heart-art {
+                font-size: 5px;
+            }
         }
 
         /* ─── BUTTONS GENERAL ─── */
-        .isa-btns, .heart-btns {
+        .isa-btns,
+        .heart-btns {
             display: flex;
             gap: 15px;
             justify-content: center;
@@ -830,7 +841,8 @@
             flex-wrap: wrap;
         }
 
-        .isa-btn, .hbtn {
+        .isa-btn,
+        .hbtn {
             padding: 10px 25px;
             border-radius: 50px;
             border: none;
@@ -844,24 +856,28 @@
             min-width: 100px;
         }
 
-        .ibtn-si, .hbtn-yes {
+        .ibtn-si,
+        .hbtn-yes {
             background: linear-gradient(135deg, var(--gold2), var(--amber));
             color: var(--darker);
             box-shadow: 0 4px 15px rgba(245, 197, 24, 0.3);
         }
 
-        .ibtn-si:hover, .hbtn-yes:hover {
+        .ibtn-si:hover,
+        .hbtn-yes:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(245, 197, 24, 0.5);
         }
 
-        .ibtn-no, .hbtn-no {
+        .ibtn-no,
+        .hbtn-no {
             background: rgba(255, 255, 255, 0.1);
             color: #fff;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .ibtn-no:hover, .hbtn-no:hover {
+        .ibtn-no:hover,
+        .hbtn-no:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
@@ -1026,6 +1042,218 @@
             letter-spacing: 2px;
             font-weight: 500;
         }
+
+        /* ─── PROMISE LETTER SECTION ─── */
+        .promise-section {
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .promise-wrap {
+            position: relative;
+            max-width: 680px;
+            width: 100%;
+        }
+
+        .promise-card {
+            background: linear-gradient(160deg, rgba(30, 10, 50, 0.85) 0%, rgba(15, 5, 30, 0.95) 100%);
+            border: 1px solid rgba(245, 197, 24, 0.35);
+            backdrop-filter: blur(20px);
+            border-radius: 28px;
+            padding: 55px 50px 50px;
+            text-align: center;
+            box-shadow:
+                0 0 60px rgba(244, 63, 138, 0.12),
+                0 25px 50px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promise-card::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            left: -80px;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(244, 63, 138, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .promise-card::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(245, 197, 24, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .promise-seal {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--rose), #be185d);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.1rem;
+            margin: 0 auto 30px;
+            box-shadow: 0 0 25px rgba(244, 63, 138, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: sealPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes sealPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 25px rgba(244, 63, 138, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+                transform: scale(1);
+            }
+
+            50% {
+                box-shadow: 0 0 45px rgba(244, 63, 138, 0.75), 0 5px 20px rgba(0, 0, 0, 0.35);
+                transform: scale(1.05);
+            }
+        }
+
+        .promise-eyebrow {
+            font-size: 0.78rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--rose);
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .promise-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.25;
+        }
+
+        .promise-heading em {
+            color: var(--gold2);
+            font-style: italic;
+        }
+
+        .promise-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+            margin: 22px 0;
+        }
+
+        .promise-divider span {
+            display: block;
+            height: 1px;
+            width: 80px;
+            background: linear-gradient(90deg, transparent, rgba(245, 197, 24, 0.4), transparent);
+        }
+
+        .promise-divider i {
+            font-style: normal;
+            color: var(--gold2);
+            font-size: 1.1rem;
+        }
+
+        .promise-body {
+            font-size: clamp(1rem, 2.5vw, 1.12rem);
+            color: #f0e6ff;
+            line-height: 1.85;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+        }
+
+        .promise-body .promise-highlight {
+            color: var(--gold2);
+            font-weight: 600;
+        }
+
+        .promise-final {
+            margin-top: 32px;
+            padding: 22px 28px;
+            background: rgba(244, 63, 138, 0.08);
+            border: 1px solid rgba(244, 63, 138, 0.25);
+            border-radius: 18px;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #fff;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .promise-final strong {
+            color: var(--gold2);
+            display: block;
+            margin-top: 8px;
+            font-size: 1.1em;
+        }
+
+        .promise-signature {
+            margin-top: 28px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.45);
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .promise-hearts-top {
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            font-size: 1.3rem;
+        }
+
+        .promise-float-heart {
+            position: absolute;
+            font-size: 1.4rem;
+            animation: floatUpSlow 4s ease-in-out infinite alternate;
+            opacity: 0.5;
+        }
+
+        .pf1 {
+            top: 15px;
+            left: 20px;
+            animation-delay: 0s;
+        }
+
+        .pf2 {
+            top: 15px;
+            right: 20px;
+            animation-delay: 1.2s;
+            font-size: 1rem;
+        }
+
+        .pf3 {
+            bottom: 20px;
+            left: 30px;
+            animation-delay: 2.4s;
+            font-size: 1.1rem;
+        }
+
+        .pf4 {
+            bottom: 20px;
+            right: 25px;
+            animation-delay: 0.6s;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 
@@ -1037,13 +1265,14 @@
     <!-- ═══════════ HERO ═══════════ -->
     <section class="hero">
         <div class="hero-badge"> 8 de Marzo · Día Internacional de la Mujer 🌼</div>
-        <h1 class="hero-title">Feliz Día,<br>Isa ❤️</h1>
+        <h1 class="hero-title">Feliz Día,<br>Isa ❣️</h1>
         <p class="hero-sub">
             Para ti, que con tu sonrisa iluminas hasta los días más ordinarios.
             Hoy y siempre, celebro lo increíble que eres.
         </p>
         <div class="hero-date">★ 8 · 03 · 2026 ★</div>
-        <div class="scroll-arrow" onclick="document.getElementById('interactive-quest').scrollIntoView({behavior:'smooth'})">↓
+        <div class="scroll-arrow"
+            onclick="document.getElementById('interactive-quest').scrollIntoView({behavior:'smooth'})">↓
         </div>
     </section>
 
@@ -1051,7 +1280,7 @@
     <section class="quest-section reveal" id="interactive-quest">
         <div class="quest-box" id="questBox">
             <div id="questContent">
-                <p class="quest-text" id="questText">Hola corazón ❤️<br>¿Sabes por qué me gustas? 😊</p>
+                <p class="quest-text" id="questText">Hola corazón ❣️<br>¿Sabes por qué me gustas? 😊</p>
                 <div class="quest-btns" id="questBtns">
                     <button class="quest-btn btn-primary" onclick="handleQuest('si')">Sí</button>
                     <button class="quest-btn btn-secondary" onclick="handleQuest('no')">No</button>
@@ -1069,9 +1298,10 @@
 
     <!-- ═══════════ SUNFLOWER ANIMATION ═══════════ -->
     <section class="canvas-container" id="canvasContainer">
-        <h2 class="canvas-title">más formas en las que te demuestro mi amor ❤️</h2>
+        <h2 class="canvas-title">más formas en las que te demuestro mi amor ❣️</h2>
         <canvas id="sunflowerCanvas" width="600" height="600"></canvas>
-        <div class="scroll-arrow" style="margin-top: 20px;" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Ver más ↓</div>
+        <div class="scroll-arrow" style="margin-top: 20px;"
+            onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Ver más ↓</div>
     </section>
 
     <!-- ═══ CARNATION ROW ═══ -->
@@ -1229,6 +1459,63 @@
                         me haces esos gestos que tanto amo ❣️.</p>
                     <span class="card-tag">🌟 Energía positiva</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROMISE LETTER SECTION ═══ -->
+    <section class="promise-section reveal">
+        <div class="promise-wrap">
+            <!-- floating corner hearts -->
+            <div class="promise-float-heart pf1">💗</div>
+            <div class="promise-float-heart pf2">🌹</div>
+            <div class="promise-float-heart pf3">💕</div>
+            <div class="promise-float-heart pf4">✨</div>
+
+            <div class="promise-card">
+                <!-- wax seal -->
+                <div class="promise-seal">💌</div>
+
+                <p class="promise-eyebrow">✦ Una carta para ti ✦</p>
+                <h2 class="promise-heading">¿Qué si prometo <em>amarte?</em></h2>
+
+                <div class="promise-divider">
+                    <span></span>
+                    <i>❤️</i>
+                    <span></span>
+                </div>
+
+                <div class="promise-body">
+                    <p>
+                        Si este amor sigue tan <span class="promise-highlight">duradero y fuerte</span> como en aquel
+                        día
+                        que nos dijimos que nos amábamos, acompañados de un beso que llenaba nuestros corazones de
+                        alegrías, amor y la intención más clara y sencilla de <span class="promise-highlight">amor hacia
+                            el otro</span>.
+                    </p>
+                    <br>
+                    <p>
+                        Si ese amor nos perdura hasta nuestros últimos días, si amar y preocuparse por el otro
+                        se vuelve <span class="promise-highlight">algo natural y espontáneo</span>, si cada día nuestro
+                        amor crece continuamente, si cada día vamos a demostrar de <span class="promise-highlight">mil
+                            maneras</span>
+                        cuánto nos importa el otro…
+                    </p>
+                </div>
+
+                <div class="promise-divider" style="margin-top: 32px;">
+                    <span></span>
+                    <i>🌹</i>
+                    <span></span>
+                </div>
+
+                <div class="promise-final">
+                    …entonces sí,
+                    <strong>prometo amarte toda la vida,<br>o hasta que el corazón te brinde amor tan sincero como la
+                        verdad absoluta. ❣️</strong>
+                </div>
+
+                <p class="promise-signature">— De Carlo</p>
             </div>
         </div>
     </section>
@@ -1598,8 +1885,8 @@
                 questStep = 4;
             } else if (questStep === 4) {
                 if (ans === 'familia_si') {
-                     questText.innerHTML = "Es una lástima que no pueda decírtelo ahora mismo entonces... 😔<br>Pero mira esto:";
-                     questBtns.innerHTML = `<button class="quest-btn btn-primary" onclick="showSunflower()">Continuar ❤️</button>`;
+                    questText.innerHTML = "Es una lástima que no pueda decírtelo ahora mismo entonces... 😔<br>Pero mira esto:";
+                    questBtns.innerHTML = `<button class="quest-btn btn-primary" onclick="showSunflower()">Continuar ❤️</button>`;
                 } else if (ans === 'familia_no' || ans === 'lista_si') {
                     questText.innerHTML = `
                         1. me encanta tu mirada<br>
@@ -1669,7 +1956,7 @@
             let i = 0;
             const phi = 137.508 * (Math.PI / 180.0);
             const totalSteps = 220;
-            
+
             function animateSeeds() {
                 if (i < totalSteps) {
                     const r = 5 * Math.sqrt(i);
@@ -1683,23 +1970,23 @@
                         ctx.beginPath();
                         ctx.arc(x, y, 4, 0, Math.PI * 2);
                         ctx.fill();
-                        
+
                         // Subtle highlight
                         ctx.fillStyle = "rgba(255,255,255,0.1)";
                         ctx.beginPath();
-                        ctx.arc(x-1, y-1, 1, 0, Math.PI * 2);
+                        ctx.arc(x - 1, y - 1, 1, 0, Math.PI * 2);
                         ctx.fill();
                     } else {
                         // Petals
                         ctx.save();
                         ctx.translate(x, y);
-                        ctx.rotate(theta + Math.PI/2);
-                        
+                        ctx.rotate(theta + Math.PI / 2);
+
                         const petalGradient = ctx.createLinearGradient(0, 0, 0, -80);
                         petalGradient.addColorStop(0, "#ffb700");
                         petalGradient.addColorStop(0.4, "#f5c518");
                         petalGradient.addColorStop(1, "#ffe044");
-                        
+
                         ctx.fillStyle = petalGradient;
                         ctx.beginPath();
                         ctx.moveTo(0, 0);
