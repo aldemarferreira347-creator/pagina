@@ -1601,6 +1601,259 @@
         </div>
     </section>
 
+    <!-- ═══════════ FLOWER GIFT SECTION ═══════════ -->
+    <style>
+        /* ── gift section ── */
+        .flower-gift-section {
+            padding: 80px 20px 100px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gift-box {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(18px);
+            border-radius: 32px;
+            max-width: 600px;
+            width: 100%;
+            padding: 52px 44px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.08);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .gift-question {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.35rem, 3.5vw, 1.9rem);
+            color: #fff;
+            line-height: 1.5;
+            margin-bottom: 38px;
+        }
+
+        .gift-question span {
+            background: linear-gradient(135deg, var(--gold2), var(--amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gift-btns {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .gift-btn {
+            padding: 14px 42px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: .06em;
+            transition: transform .25s cubic-bezier(.175,.885,.32,1.275), box-shadow .25s ease;
+        }
+
+        .gift-btn:hover { transform: translateY(-3px); }
+
+        .gift-btn-yes {
+            background: linear-gradient(135deg, #d4a017, #f5c518, #ffe66d);
+            color: #1a1000;
+            box-shadow: 0 6px 22px rgba(245,197,24,.35);
+        }
+
+        .gift-btn-no {
+            background: rgba(255,255,255,.08);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,.18);
+        }
+
+        .gift-response {
+            display: none;
+            animation: giftFadeUp .6s ease forwards;
+        }
+
+        @keyframes giftFadeUp {
+            from { opacity:0; transform: translateY(16px); }
+            to   { opacity:1; transform: translateY(0); }
+        }
+
+        .gift-msg {
+            font-size: 1.2rem;
+            color: #fce7f3;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .gift-msg strong {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            background: linear-gradient(135deg, var(--gold2), var(--amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .present-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 48px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: .05em;
+            background: linear-gradient(135deg, #8a4fff, #d94f8c, #f5c518);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite;
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(180,60,200,.35);
+            transition: transform .25s cubic-bezier(.175,.885,.32,1.275), box-shadow .25s ease;
+        }
+
+        .present-btn:hover {
+            transform: scale(1.07);
+            box-shadow: 0 14px 40px rgba(180,60,200,.5);
+        }
+
+        @keyframes gradientShift {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ── full-screen flower modal ── */
+        .flower-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,.92);
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            animation: modalIn .4s ease;
+        }
+
+        .flower-modal.open {
+            display: flex;
+        }
+
+        @keyframes modalIn {
+            from { opacity:0; }
+            to   { opacity:1; }
+        }
+
+        .flower-modal iframe {
+            width: min(500px, 96vw);
+            height: min(880px, 92vh);
+            border: none;
+            border-radius: 24px;
+            box-shadow: 0 30px 80px rgba(0,0,0,.7), 0 0 0 1px rgba(255,210,60,.25);
+        }
+
+        .modal-close {
+            margin-top: 18px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.18);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: .9rem;
+            padding: 10px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background .2s;
+        }
+
+        .modal-close:hover { background: rgba(255,255,255,.16); }
+    </style>
+
+    <!-- SECTION HTML -->
+    <section class="flower-gift-section" id="flowerGift">
+        <div class="gift-box">
+            <!-- QUESTION -->
+            <div id="giftQuestion">
+                <p class="gift-question">🌼 ¿Hoy es el día de<br><span>las flores amarillas?</span></p>
+                <div class="gift-btns">
+                    <button class="gift-btn gift-btn-yes" onclick="giftAnswer(true)">Sí ✨</button>
+                    <button class="gift-btn gift-btn-no"  onclick="giftAnswer(false)">No 🌙</button>
+                </div>
+            </div>
+
+            <!-- RESPONSE YES -->
+            <div class="gift-response" id="giftYes">
+                <div class="gift-msg">
+                    <strong>ok, toma tu regalo corazón ❣️</strong>
+                    hay algo especial esperándote...
+                </div>
+                <button class="present-btn" onclick="openFlowerModal()">
+                    🎁 &nbsp;Regalo
+                </button>
+            </div>
+
+            <!-- RESPONSE NO -->
+            <div class="gift-response" id="giftNo">
+                <div class="gift-msg">
+                    <strong>¿enserio? no importa 🌼</strong>
+                    todo tuyo de igual manera, niña ❣️
+                </div>
+                <button class="present-btn" onclick="openFlowerModal()">
+                    🎁 &nbsp;Regalo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOWER MODAL -->
+    <div class="flower-modal" id="flowerModal">
+        <iframe id="flowerFrame" src="" title="Flores animadas"></iframe>
+        <button class="modal-close" onclick="closeFlowerModal()">✕ &nbsp;Cerrar</button>
+    </div>
+
+    <script>
+        function giftAnswer(yes) {
+            document.getElementById('giftQuestion').style.display = 'none';
+            if (yes) {
+                document.getElementById('giftYes').style.display = 'block';
+            } else {
+                document.getElementById('giftNo').style.display  = 'block';
+            }
+        }
+
+        function openFlowerModal() {
+            const modal = document.getElementById('flowerModal');
+            const frame = document.getElementById('flowerFrame');
+            // Load fresh each time so animation restarts
+            frame.src = 'prueba.html';
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFlowerModal() {
+            const modal = document.getElementById('flowerModal');
+            const frame = document.getElementById('flowerFrame');
+            modal.classList.remove('open');
+            frame.src = '';      // stop animation
+            document.body.style.overflow = '';
+        }
+
+        // Close on backdrop click
+        document.getElementById('flowerModal').addEventListener('click', function(e) {
+            if (e.target === this) closeFlowerModal();
+        });
+    </script>
+
+
     <footer>
         <p>Hecho por Carlo</p>
     </footer>
@@ -2012,6 +2265,7 @@
             animateSeeds();
         }
     </script>
+
 </body>
 
 </html>
