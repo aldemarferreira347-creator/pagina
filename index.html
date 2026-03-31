@@ -801,6 +801,7 @@
         }
 
         .music-btn:hover {
+
             transform: scale(1.12);
             box-shadow: 0 6px 28px rgba(244, 63, 138, .65);
         }
@@ -1279,10 +1280,94 @@
             animation-delay: 0.6s;
             font-size: 0.9rem;
         }
+
+        /* ─── MENÚ DE NAVEGACIÓN PRINCIPAL (HOME) ─── */
+        .main-nav {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            z-index: 10;
+        }
+
+        .nav-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-8px);
+            background: linear-gradient(145deg, rgba(244,63,138,0.2), rgba(245,197,24,0.1));
+            border-color: var(--gold);
+            box-shadow: 0 15px 40px rgba(245,197,24,0.3);
+        }
+
+        .nav-icon {
+            font-size: 3rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+        }
+
+        .nav-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--gold2);
+            font-weight: 700;
+        }
+
+        .nav-desc {
+            font-size: 0.85rem;
+            color: #ccc;
+            line-height: 1.4;
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 9999;
+            background: rgba(15, 10, 30, 0.8);
+            border: 1px solid var(--gold);
+            color: var(--gold2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            display: none; /* hidden by default */
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--gold);
+            color: #000;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 
 <body>
+    <!-- BOTÓN VOLVER -->
+    <button id="backBtn" class="back-btn" onclick="showView('home')">⬅ Volver al Menú</button>
 
     <!-- Falling petals -->
     <div class="petals-wrap" id="petals"></div>
@@ -1296,6 +1381,29 @@
             Hoy y siempre, celebro lo increíble que eres.
         </p>
         <div class="hero-date">★ 8 · 03 · 2026 ★</div>
+        <!-- MENÚ EN FORMA DE TARJETAS -->
+        <div class="main-nav">
+            <div class="nav-card" onclick="showView('cartas')">
+                <span class="nav-icon">💌</span>
+                <span class="nav-title">Carta de Promesa</span>
+                <span class="nav-desc">Una promesa de amor para toda la vida.</span>
+            </div>
+            <div class="nav-card" onclick="showView('romanticismo')">
+                <span class="nav-icon">💕</span>
+                <span class="nav-title">Romántico</span>
+                <span class="nav-desc">Nuestos recuerdos y fechas inolvidables.</span>
+            </div>
+            <div class="nav-card" onclick="showView('dedicatoria')">
+                <span class="nav-icon">✨</span>
+                <span class="nav-title">Dedicatoria 8M</span>
+                <span class="nav-desc">Para la mujer más increíble de todas.</span>
+            </div>
+            <div class="nav-card" onclick="showView('flores')">
+                <span class="nav-icon">🌻</span>
+                <span class="nav-title">Flores Amarillas</span>
+                <span class="nav-desc">Un detalle único pensado para ti.</span>
+            </div>
+        </div>
         <div class="scroll-arrow"
             onclick="document.getElementById('interactive-quest').scrollIntoView({behavior:'smooth'})">↓
         </div>
@@ -1489,7 +1597,7 @@
     </section>
 
     <!-- ═══ PROMISE LETTER SECTION ═══ -->
-    <section class="promise-section reveal">
+    <section class="promise-section reveal" id="cartas">
         <div class="promise-wrap">
             <!-- floating corner hearts -->
             <div class="promise-float-heart pf1">💗</div>
@@ -1570,7 +1678,7 @@
     </section>
 
     <!-- ═══ TIMER SECTION ═══ -->
-    <section class="timer-section reveal">
+    <section class="timer-section reveal" id="fechas">
         <div class="timer-box">
             <h2 class="timer-title">llevas en mi corazón desde:<br><span>16 de agosto de 2025</span> ❤️</h2>
             <div id="contador"></div>
@@ -1583,19 +1691,6 @@
             <h2 class="timer-title">esperando que llegaras a mi vida desde:<br><span>30 de agosto de 2008</span> ❤️</h2>
             <div id="contador2"></div>
         </div>
-    </section>
-
-    <!-- ═══════════ CLOSING ═══════════ -->
-    <section class="closing">
-        <h2 class="reveal">
-            Hoy celebro a la mujer<br>que me hace mejor persona
-        </h2>
-        <p class="reveal">
-            No sé cómo llamar exactamente lo que somos, pero sé que eres
-            de las pocas personas en las que confío con todo. Feliz día, hermosa.
-            Ojalá siempre tengas recuerdos, alegrias, y sonrisas tan bonitas como las tuyas.
-        </p>
-        <div class="closing-hearts">isabela❣️</div>
     </section>
 
     <!-- ═══ ISA SECTION ─── -->
@@ -1624,6 +1719,19 @@
             <pre class="heart-art" id="heartArt"></pre>
             <p class="heart-ok" id="heartOk"></p>
         </div>
+    </section>
+
+    <!-- ═══════════ CLOSING ═══════════ -->
+    <section class="closing">
+        <h2 class="reveal">
+            Hoy celebro a la mujer<br>que me hace mejor persona
+        </h2>
+        <p class="reveal">
+            No sé cómo llamar exactamente lo que somos, pero sé que eres
+            de las pocas personas en las que confío con todo. Feliz día, hermosa.
+            Ojalá siempre tengas recuerdos, alegrias, y sonrisas tan bonitas como las tuyas.
+        </p>
+        <div class="closing-hearts">isabela❣️</div>
     </section>
 
     <!-- ═══════════ FLOWER GIFT SECTION ═══════════ -->
@@ -1973,113 +2081,6 @@
             </div>
         </div>
     </section>
-    <section class="xmas-section" id="cartaNavidad">
-        <div class="xmas-letter">
-            <!-- animated snowflakes inside the card -->
-            <div class="xmas-flakes" id="xmasFlakes"></div>
-
-            <div class="xmas-header">
-                <span class="xmas-divider"></span>
-                <span class="xmas-badge">🎄 Navidad 2025</span>
-                <span class="xmas-divider"></span>
-            </div>
-
-            <div class="xmas-seal">💌</div>
-
-            <h2 class="xmas-title">Feliz Navidad, Corazón</h2>
-            <p class="xmas-subtitle">Una carta para Isabela ❣️</p>
-
-            <div class="xmas-pine">🌲&nbsp;&nbsp;❄️&nbsp;&nbsp;🌲</div>
-
-            <div class="xmas-body">
-                <p>Hola.<br>
-                    Seguimos aquí a pesar de todas las cosas, quién lo diría.<br>
-                    Te escribo esto con el poco tiempo que tengo, con la poca paz mental que me queda — créeme que he
-                    escrito más de 1500 letras y me tocó borrarlo porque escribí solo problemas.</p>
-
-                <p>Te deseo un día feliz, un día lleno de nuevas experiencias, una navidad que haga que <span
-                        class="xmas-highlight">ninguna navidad se iguale a esto.</span><br>
-                    Feliz navidad, corazón.</p>
-
-                <p>Mi mente crea un deseo intenso cuando te piensa, algo casi como una necesidad de volver a verte, una
-                    necesidad de volver a sentir tu aroma, una necesidad de volver a sentir tu calor — siendo sincero
-                    nunca creí que fuera posible que mi alma, que mi corazón y que mi cuerpo, a pesar de todas esas
-                    adversidades y todo el cariño creciente hacia esa persona especial, pueda resurgir tan fácilmente.
-                </p>
-
-                <p>3 veces son 3 veces, y en estas 3 veces no te puedes imaginar cuánto cariño y amor sentí, siento y
-                    sentiré por ti y todo lo que me producen:</p>
-
-                <ul class="xmas-list">
-                    <li>cada palabra, cada pequeño gesto, cada regalo, cada foto</li>
-                    <li>cada beso, cada vez que nos miramos a los ojos, cada pico</li>
-                    <li>cada preocupación por el otro, cada muestra de cariño</li>
-                    <li>cada sonrisa que compartimos juntos, cada coqueteo, cada roce</li>
-                    <li>cada hurgada de nariz, cada hurgada de oído, cada mordida</li>
-                    <li>cada agarrón de manos, cada beso robado, cada abrazo</li>
-                    <li>cada momento juntos, cada doble mensaje diciéndome cuánto me extrañas</li>
-                    <li>cada mensaje diciéndome que me quieres, cada momento íntimo</li>
-                    <li>cada pensamiento en ti, cada recuerdo contigo</li>
-                    <li>cada lugar en los que compartimos algo, cada foto juntos</li>
-                </ul>
-
-                <p>Definitivamente para mí se vuelve algo único y hermoso — que cada vez que recuerdo algo de esto pongo
-                    una sonrisa de tonto y me adentro en mi mente de una manera que hace que navegue en un mar tan
-                    profundo, oscuro y denso, que lo único que me salva eres tú. Sí, tú. <span class="xmas-highlight">Tú
-                        eras, eres y serás la luz de mi vida.</span></p>
-
-                <p>He renunciado y cambiado a tantas cosas desde que te conozco… ¿qué es esto de ser meloso? ¿qué es
-                    esto de ser romántico? ¿qué es esto de querer salir con alguien, de mandar besos en llamada, de
-                    hacer textos expresando mis sentimientos?<br>
-                    Me pregunto si todos estos cambios me los hace el no verte, si es porque te extraño, si es que
-                    simplemente estoy cambiando… o si es por lo mucho que te quiero tener cerca de nuevo — sea lo que
-                    sea, estoy seguro de que te lo diría hoy y mil veces más de ser necesario.</p>
-
-                <p>Isabelita, isabela, isa, corazón, mi vida, mi amor — sé que hoy no ha sido tu mejor día con esos
-                    dolores, que cada vez los cólicos son más fuertes y que yo no puedo hacer nada para ayudarte. Ojalá
-                    pudiera estar ahí contigo, de verdad, aunque sea para hacerte sentir un poquito mejor.</p>
-
-                <p>Lo único que sé es que tú eres tan especial, tan delicada y a la vez tan fuerte, que a veces me quedo
-                    pensando en cómo haces para aguantar tanto sin quejarte y buscar la solución a pesar de las
-                    circunstancias.</p>
-
-                <p>Sinceramente para mí, <span class="xmas-highlight">tú eres una mujer única en todos los
-                        sentidos.</span> Tu forma de hablar, tu forma especial de reír, esa mirada tuya que tanto anhelo
-                    ver todos los días… Todo en ti tiene como un hechizo que incluso cuando estás cansada o con
-                    malestar, igual sigues teniendo esa ternura que me desarma por completo.</p>
-
-                <p>Tú tienes una manera tan bonita de ser que a uno le dan ganas de estar ahí cerquita cuidándote,
-                    escuchándote, y haciéndote sonreír, aunque sea un momento.</p>
-
-                <p>Mi corazón se ha enseñado a amarte de una forma tan bonita, que me lastima verte enferma o sufriendo
-                    de alguna manera — aunque a veces no pueda encontrar una salida, mi corazón y mi mente se unen solo
-                    por ti y me motivan a sacar lo mejor de mí solamente para verte feliz. <span
-                        class="xmas-highlight">Tú tienes ese efecto raro en mí.</span></p>
-
-                <p>Mañana te veré en mis pensamientos y la verdad, solo pensar en eso ya me mejora el ánimo — solo de
-                    pensar en que te veré de nuevo. Pero pensar en que no podré tocar tu piel de nuevo, sentir tu aroma
-                    de nuevo, disfrutar tu cariño físico de nuevo, me hace esperar ese domingo sin parar y eso me cambia
-                    la perspectiva de mis días sin darme cuenta…</p>
-
-                <p>Trata de no esforzarte mucho en tu salida de más rato, avísame cuando llegues de nuevo a casa, y yo
-                    sigo aquí, queriéndote cada día un poquito más sin que yo mismo me dé cuenta — porque, en fin, <span
-                        class="xmas-highlight">¿cómo puedo dejar de pensarte y dejar de quererte cuando lo único que
-                        quiero es a mi niña?</span></p>
-
-                <p>Puede que para tus gustos no cuadre o no se iguale a un regalo de navidad, pero esto es todo lo que
-                    te puedo dar en este momento.<br>
-                    Aún no puedo entender cómo pude llegar a quererte tanto. Puede que no valga para ti, puede que sea
-                    algo más del montón, algo más que leer, algo más que olvidar… pero para mí <span
-                        class="xmas-highlight">abre mi alma, mente y corazón en un solo instante.</span></p>
-            </div>
-
-            <div class="xmas-closing">
-                <p class="xmas-love">Te amo, Isabela</p>
-                <span class="xmas-heart">❣️</span>
-            </div>
-        </div>
-    </section>
-
 
     <!-- FLOWER MODAL -->
     <div class="flower-modal" id="flowerModal">
@@ -2969,251 +2970,6 @@
         })();
     </script>
 
-    <!-- ─── CHRISTMAS LETTER SECTION ─── -->
-    <style>
-        /* ─── CHRISTMAS LETTER ─── */
-        .xmas-section {
-            position: relative;
-            z-index: 1;
-            padding: 80px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .xmas-letter {
-            background: linear-gradient(160deg, #0d2212 0%, #0a1a0e 60%, #091209 100%);
-            border: 1px solid rgba(198, 160, 60, 0.35);
-            border-radius: 28px;
-            max-width: 720px;
-            width: 100%;
-            padding: 60px 50px 50px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(198, 160, 60, 0.12), inset 0 0 80px rgba(255, 255, 255, 0.02);
-        }
-
-        @media (max-width: 600px) {
-            .xmas-letter {
-                padding: 40px 24px 36px;
-            }
-        }
-
-        /* corner ornaments */
-        .xmas-letter::before,
-        .xmas-letter::after {
-            content: '❄';
-            position: absolute;
-            font-size: 5rem;
-            opacity: 0.05;
-            pointer-events: none;
-        }
-
-        .xmas-letter::before {
-            top: -10px;
-            left: -10px;
-        }
-
-        .xmas-letter::after {
-            bottom: -10px;
-            right: -10px;
-            transform: rotate(45deg);
-        }
-
-        /* snowflake bg pattern */
-        .xmas-flakes {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            overflow: hidden;
-            border-radius: 28px;
-        }
-
-        .xflake {
-            position: absolute;
-            top: -40px;
-            color: #fff;
-            opacity: 0;
-            font-size: 1rem;
-            animation: xfall linear infinite;
-            user-select: none;
-        }
-
-        @keyframes xfall {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0.18;
-            }
-
-            100% {
-                transform: translateY(110%) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* header bar */
-        .xmas-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-            margin-bottom: 36px;
-        }
-
-        .xmas-divider {
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(198, 160, 60, 0.5), transparent);
-        }
-
-        .xmas-badge {
-            background: linear-gradient(135deg, #1a6b2a, #0d4b1d);
-            border: 1px solid rgba(198, 160, 60, 0.4);
-            border-radius: 50px;
-            padding: 6px 20px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #c6a03c;
-        }
-
-        /* wax seal */
-        .xmas-seal {
-            width: 64px;
-            height: 64px;
-            background: radial-gradient(circle at 40% 35%, #c0392b, #7b1a14);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin: 0 auto 32px;
-            box-shadow: 0 4px 20px rgba(192, 57, 43, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.15);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            animation: sealPulse 3s ease-in-out infinite;
-        }
-
-        @keyframes sealPulse {
-
-            0%,
-            100% {
-                box-shadow: 0 4px 20px rgba(192, 57, 43, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.15);
-            }
-
-            50% {
-                box-shadow: 0 4px 32px rgba(192, 57, 43, 0.8), inset 0 2px 4px rgba(255, 255, 255, 0.15);
-            }
-        }
-
-        /* title */
-        .xmas-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8rem, 5vw, 2.8rem);
-            text-align: center;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #c6a03c, #ffe17a, #c6a03c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-
-        .xmas-subtitle {
-            text-align: center;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.35);
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-        }
-
-        /* letter body */
-        .xmas-body {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            line-height: 1.9;
-            color: rgba(255, 255, 255, 0.82);
-        }
-
-        .xmas-body p {
-            margin-bottom: 22px;
-        }
-
-        .xmas-body .xmas-highlight {
-            color: #ffe17a;
-            font-style: italic;
-        }
-
-        .xmas-body .xmas-list {
-            margin: 0 0 22px 0;
-            padding-left: 0;
-            list-style: none;
-            border-left: 3px solid rgba(198, 160, 60, 0.35);
-            padding-left: 20px;
-        }
-
-        .xmas-body .xmas-list li {
-            padding: 3px 0;
-            color: rgba(255, 255, 255, 0.78);
-        }
-
-        .xmas-body .xmas-list li::before {
-            content: '✦ ';
-            color: #c6a03c;
-            font-size: 0.7rem;
-        }
-
-        /* closing */
-        .xmas-closing {
-            margin-top: 36px;
-            text-align: center;
-            border-top: 1px solid rgba(198, 160, 60, 0.2);
-            padding-top: 28px;
-        }
-
-        .xmas-closing .xmas-love {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.35rem;
-            color: #ffe17a;
-            margin-bottom: 6px;
-        }
-
-        .xmas-closing .xmas-heart {
-            font-size: 2rem;
-            animation: pulse 1.8s ease-in-out infinite;
-            display: inline-block;
-        }
-
-        /* pine decorations */
-        .xmas-pine {
-            text-align: center;
-            font-size: 1.6rem;
-            letter-spacing: 6px;
-            margin-bottom: 30px;
-            opacity: 0.7;
-        }
-    </style>
-
-
-    <script>
-        // Snowflakes inside the Christmas letter
-        (function () {
-            const container = document.getElementById('xmasFlakes');
-            const symbols = ['❄', '❅', '❆', '✦', '⁕'];
-            for (let i = 0; i < 18; i++) {
-                const el = document.createElement('span');
-                el.className = 'xflake';
-                el.textContent = symbols[i % symbols.length];
-                el.style.left = (Math.random() * 100) + '%';
-                el.style.fontSize = (0.6 + Math.random() * 0.8) + 'rem';
-                el.style.animationDuration = (6 + Math.random() * 10) + 's';
-                el.style.animationDelay = (Math.random() * 8) + 's';
-                container.appendChild(el);
-            }
-        })();
-    </script>
-
     <audio id="bgMusic" loop>
         <source src="musica.mp3" type="audio/mpeg">
     </audio>
@@ -3250,6 +3006,59 @@
             isPlaying = true;
             musicBtn.textContent = '⏸️';
         });
+    </script>
+    <script>
+        // --- NAVEGACIÓN INDEPENDIENTE (SPA) ---
+        document.addEventListener("DOMContentLoaded", () => {
+            const viewMapping = {
+                'home': ['.hero'],
+                'cartas': ['#cartas'],
+                'romanticismo': ['#gallery', '.timer-section'],
+                'flores': [
+                    '#flowerGift',
+                    '#canvasContainer',
+                    '#carnations-row'
+                ],
+                'dedicatoria': [
+                    '#interactive-quest', 
+                    '.winner-section', 
+                    '.closing',
+                    '.isa-section',
+                    '.heart-section'
+                ]
+            };
+
+            for (const [viewName, selectors] of Object.entries(viewMapping)) {
+                selectors.forEach(selector => {
+                    document.querySelectorAll(selector).forEach(el => {
+                        el.setAttribute('data-view', viewName);
+                    });
+                });
+            }
+            // Inicia mostrando solo el menú
+            showView('home');
+        });
+
+        window.showView = function(viewName) {
+            // Oculta todas las secciones
+            document.querySelectorAll('[data-view]').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Muestra solo la que se requiere
+            document.querySelectorAll(`[data-view="${viewName}"]`).forEach(el => {
+                el.style.display = ''; 
+            });
+            
+            // Botón Volver
+            const backBtn = document.getElementById('backBtn');
+            if(backBtn) {
+                backBtn.style.display = (viewName === 'home') ? 'none' : 'flex';
+            }
+            
+            // Scroll hacia arriba
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        };
     </script>
 </body>
 
