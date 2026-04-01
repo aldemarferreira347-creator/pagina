@@ -276,7 +276,6 @@
             gap: 32px;
         }
 
-        /* card */
         .card {
             position: relative;
             border-radius: 24px;
@@ -293,7 +292,6 @@
             box-shadow: 0 16px 40px rgba(245, 197, 24, .2);
         }
 
-        /* featured card spans 2 cols on large screens */
         .card.featured {
             grid-column: span 2;
         }
@@ -326,7 +324,6 @@
             transform: scale(1.07);
         }
 
-        /* overlay */
         .card-overlay {
             position: absolute;
             inset: 0;
@@ -343,7 +340,6 @@
             opacity: 1;
         }
 
-        /* always-visible bottom strip */
         .card-caption {
             padding: 20px 22px 22px;
         }
@@ -373,7 +369,6 @@
             font-weight: 300;
         }
 
-        /* overlay quote */
         .overlay-quote {
             font-family: 'Playfair Display', serif;
             font-style: italic;
@@ -388,7 +383,6 @@
             display: block;
         }
 
-        /* accent tag */
         .card-tag {
             display: inline-block;
             margin-top: 12px;
@@ -447,7 +441,6 @@
             }
         }
 
-        /* footer */
         footer {
             position: relative;
             z-index: 1;
@@ -458,14 +451,12 @@
             border-top: 1px solid rgba(255, 255, 255, .06);
         }
 
-        /* hide labels, tags and date */
         .card-label,
         .card-tag,
         .hero-date {
             display: none;
         }
 
-        /* reveal on scroll */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -666,334 +657,6 @@
             overflow: hidden;
         }
 
-        .timer-title {
-            font-family: 'Playfair Display', serif;
-            color: #fff;
-            font-size: clamp(1.4rem, 4vw, 2rem);
-            margin-bottom: 35px;
-            line-height: 1.4;
-        }
-
-        .timer-title span {
-            color: var(--rose);
-            font-weight: 700;
-        }
-
-        #contador,
-        #contador2 {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .time-block {
-            background: rgba(15, 10, 30, 0.6);
-            border: 1px solid rgba(244, 63, 138, 0.2);
-            border-radius: 20px;
-            padding: 20px 15px;
-            min-width: 100px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .time-val {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--gold2);
-            text-shadow: 0 0 15px rgba(255, 224, 68, 0.4);
-        }
-
-        .time-label {
-            font-size: 0.8rem;
-            color: #fce7f3;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* ─── SUNFLOWER CANVAS ─── */
-        .canvas-container {
-            display: none;
-            justify-content: center;
-            align-items: center;
-            padding: 60px 20px;
-            position: relative;
-            z-index: 1;
-            flex-direction: column;
-        }
-
-        #sunflowerCanvas {
-            max-width: 100%;
-            border-radius: 20px;
-            background: #000;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--border);
-        }
-
-        .canvas-title {
-            font-family: 'Playfair Display', serif;
-            color: var(--gold2);
-            margin-bottom: 25px;
-        }
-
-        /* ─── ISA SECTION ─── */
-        .isa-section {
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .isa-box {
-            background: var(--glass);
-            border: 1px solid var(--border);
-            backdrop-filter: blur(15px);
-            padding: 40px;
-            border-radius: 30px;
-            max-width: 550px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .isa-title {
-            font-family: 'Playfair Display', serif;
-            color: var(--gold2);
-            font-size: 2rem;
-            margin-bottom: 25px;
-        }
-
-        .isa-question {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            color: #fff;
-        }
-
-        .isa-message {
-            display: none;
-            font-size: 1.15rem;
-            color: #fce7f3;
-            margin-top: 20px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-        }
-
-        /* ─── MUSIC BUTTON ─── */
-        .music-btn {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 9998;
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            background: linear-gradient(135deg, var(--rose), var(--amber));
-            box-shadow: 0 4px 20px rgba(244, 63, 138, .45);
-            font-size: 1.4rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform .25s ease, box-shadow .25s ease;
-        }
-
-        .music-btn:hover {
-            transform: scale(1.12);
-            box-shadow: 0 6px 28px rgba(244, 63, 138, .65);
-        }
-
-        /* ─── HEART SECTION ─── */
-        .heart-section {
-            padding: 60px 20px 100px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .heart-box {
-            background: var(--glass);
-            border: 1px solid var(--border);
-            backdrop-filter: blur(12px);
-            padding: 40px;
-            border-radius: 30px;
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .heart-question {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-            color: var(--gold2);
-        }
-
-        .heart-art {
-            margin-top: 30px;
-            font-family: monospace;
-            font-size: 8px;
-            line-height: 1;
-            color: red;
-            white-space: pre;
-            display: none;
-            text-align: left;
-            margin: 20px auto;
-            width: fit-content;
-        }
-
-        .heart-ok {
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: #9ca3af;
-            display: none;
-        }
-
-        @media (max-width: 500px) {
-            .heart-art {
-                font-size: 5px;
-            }
-        }
-
-        /* ─── BUTTONS GENERAL ─── */
-        .isa-btns,
-        .heart-btns {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-
-        .isa-btn,
-        .hbtn {
-            padding: 10px 25px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            min-width: 100px;
-        }
-
-        .ibtn-si,
-        .hbtn-yes {
-            background: linear-gradient(135deg, var(--gold2), var(--amber));
-            color: var(--darker);
-            box-shadow: 0 4px 15px rgba(245, 197, 24, 0.3);
-        }
-
-        .ibtn-si:hover,
-        .hbtn-yes:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(245, 197, 24, 0.5);
-        }
-
-        .ibtn-no,
-        .hbtn-no {
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .ibtn-no:hover,
-        .hbtn-no:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .flower-1 {
-            top: -20px;
-            left: -20px;
-            animation-delay: 0s;
-            transform: rotate(-15deg);
-        }
-
-        .flower-2 {
-            bottom: -15px;
-            right: -25px;
-            animation-delay: 1s;
-            font-size: 2.5rem;
-            transform: rotate(15deg);
-        }
-
-        .flower-3 {
-            top: 40%;
-            left: -30px;
-            animation-delay: 2s;
-            font-size: 1.8rem;
-        }
-
-        .winner-dec-heart {
-            position: absolute;
-            font-size: 1.5rem;
-            color: var(--rose);
-            filter: drop-shadow(0 2px 4px rgba(244, 63, 138, 0.4));
-            animation: floatUpSlow 3s ease-in-out infinite alternate;
-            z-index: -1;
-        }
-
-        .heart-1 {
-            top: -30px;
-            right: 10%;
-            animation-delay: 0.5s;
-            font-size: 1.8rem;
-        }
-
-        .heart-2 {
-            bottom: -20px;
-            left: 15%;
-            animation-delay: 1.5s;
-            font-size: 1.2rem;
-        }
-
-        .heart-3 {
-            top: 20%;
-            right: -25px;
-            animation-delay: 2.5s;
-            font-size: 2rem;
-        }
-
-        @keyframes gentleSway {
-            to {
-                transform: translateY(-8px) rotate(5deg);
-            }
-        }
-
-        @keyframes floatUpSlow {
-            to {
-                transform: translateY(-12px) scale(1.1);
-            }
-        }
-
-        /* ─── TIMER SECTION ─── */
-        .timer-section {
-            padding: 60px 20px;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .timer-box {
-            background: var(--glass);
-            border: 1px solid var(--border);
-            backdrop-filter: blur(15px);
-            padding: 50px 40px;
-            border-radius: 30px;
-            max-width: 700px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
         .timer-box::before {
             content: '';
             position: absolute;
@@ -1025,7 +688,8 @@
             font-weight: 700;
         }
 
-        #contador {
+        #contador,
+        #contador2 {
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -1068,7 +732,32 @@
             font-weight: 500;
         }
 
-        /* ─── PROMISE LETTER SECTION ─── */
+        /* ─── CANVAS ─── */
+        .canvas-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+            flex-direction: column;
+        }
+
+        #sunflowerCanvas {
+            max-width: 100%;
+            border-radius: 20px;
+            background: #000;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border);
+        }
+
+        .canvas-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold2);
+            margin-bottom: 25px;
+        }
+
+        /* ─── PROMISE LETTER ─── */
         .promise-section {
             padding: 80px 20px;
             display: flex;
@@ -1090,10 +779,7 @@
             border-radius: 28px;
             padding: 55px 50px 50px;
             text-align: center;
-            box-shadow:
-                0 0 60px rgba(244, 63, 138, 0.12),
-                0 25px 50px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            box-shadow: 0 0 60px rgba(244, 63, 138, 0.12), 0 25px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
             position: relative;
             overflow: hidden;
         }
@@ -1236,16 +922,6 @@
             z-index: 1;
         }
 
-        .promise-hearts-top {
-            position: absolute;
-            top: -18px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            font-size: 1.3rem;
-        }
-
         .promise-float-heart {
             position: absolute;
             font-size: 1.4rem;
@@ -1279,356 +955,323 @@
             animation-delay: 0.6s;
             font-size: 0.9rem;
         }
-    </style>
-</head>
 
-<body>
+        /* ─── MAIN NAV ─── */
+        .main-nav {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            z-index: 10;
+        }
 
-    <!-- Falling petals -->
-    <div class="petals-wrap" id="petals"></div>
+        .nav-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+        }
 
-    <!-- ═══════════ HERO ═══════════ -->
-    <section class="hero">
-        <div class="hero-badge"> 8 de Marzo · Día Internacional de la Mujer 🌼</div>
-        <h1 class="hero-title">Feliz Día,<br>Isa ❣️</h1>
-        <p class="hero-sub">
-            Para ti, que con tu sonrisa iluminas hasta los días más ordinarios.
-            Hoy y siempre, celebro lo increíble que eres.
-        </p>
-        <div class="hero-date">★ 8 · 03 · 2026 ★</div>
-        <div class="scroll-arrow"
-            onclick="document.getElementById('interactive-quest').scrollIntoView({behavior:'smooth'})">↓
-        </div>
-    </section>
+        .nav-card:hover {
+            transform: translateY(-8px);
+            background: linear-gradient(145deg, rgba(244, 63, 138, 0.2), rgba(245, 197, 24, 0.1));
+            border-color: var(--gold);
+            box-shadow: 0 15px 40px rgba(245, 197, 24, 0.3);
+        }
 
-    <!-- ═══════════ INTERACTIVE QUESTIONNAIRE ═══════════ -->
-    <section class="quest-section reveal" id="interactive-quest">
-        <div class="quest-box" id="questBox">
-            <div id="questContent">
-                <p class="quest-text" id="questText">Hola corazón ❣️<br>¿Sabes por qué me gustas? 😊</p>
-                <div class="quest-btns" id="questBtns">
-                    <button class="quest-btn btn-primary" onclick="handleQuest('si')">Sí</button>
-                    <button class="quest-btn btn-secondary" onclick="handleQuest('no')">No</button>
-                </div>
-                <ul class="quest-list" id="razonesList">
-                    <li>✨ Eres muy amable y considerada.</li>
-                    <li>✨ Tienes una sonrisa que ilumina mi día.</li>
-                    <li>✨ Me encanta tu sentido del humor.</li>
-                    <li>✨ Eres muy inteligente y creativa.</li>
-                    <li>✨ Siempre sabes cómo hacerme sentir mejor.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        .nav-icon {
+            font-size: 3rem;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+        }
 
-    <!-- ═══════════ SUNFLOWER ANIMATION ═══════════ -->
-    <section class="canvas-container" id="canvasContainer">
-        <h2 class="canvas-title">más formas en las que te demuestro mi amor ❣️</h2>
-        <canvas id="sunflowerCanvas" width="600" height="600"></canvas>
-        <div class="scroll-arrow" style="margin-top: 20px;"
-            onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Ver más ↓</div>
-    </section>
+        .nav-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--gold2);
+            font-weight: 700;
+        }
 
-    <!-- ═══ CARNATION ROW ═══ -->
-    <div class="carnations-row" id="carnations-row"></div>
+        .nav-desc {
+            font-size: 0.85rem;
+            color: #ccc;
+            line-height: 1.4;
+        }
 
-    <!-- ═══════════ GALLERY ═══════════ -->
-    <section class="gallery-section" id="gallery">
-        <div class="section-label reveal">
-            <h2>Momentos que me roban el corazón</h2>
-            <p>Porque entre tú y yo siempre hay algo especial que no tiene nombre exacto… y eso lo hace único.</p>
-        </div>
+        /* BACK BUTTON */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 9999;
+            background: rgba(15, 10, 30, 0.8);
+            border: 1px solid var(--gold);
+            color: var(--gold2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
 
-        <div class="cards-grid">
+        .back-btn:hover {
+            background: var(--gold);
+            color: #000;
+            transform: scale(1.05);
+        }
 
-            <!-- 1 · Sunset hands -->
-            <div class="card featured reveal">
-                <div class="card-img-wrap">
-                    <img src="img/foto1.jpeg" alt="Atardecer mágico en el mar" loading="lazy" />
-                    <div class="card-overlay">
-                        <span class="overlay-emoji">🌅</span>
-                        <p class="overlay-quote">"Contigo, hasta el sol parece que se detiene a mirar lo bonito de este
-                            momento."</p>
-                    </div>
-                </div>
-                <div class="card-caption">
-                    <p class="card-label">✦ Nuestro lugar favorito</p>
-                    <h3 class="card-title">El atardecer más bonito fue contigo</h3>
-                    <p class="card-desc">Ese momento con el mar de fondo y el sol hundiéndose lentamente… fue de los que
-                        quedan grabados para siempre.</p>
-                    <span class="card-tag">🌊 Atardecer</span>
-                </div>
-            </div>
+        /* ─── ISA SECTION ─── */
+        .isa-section {
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
 
-            <!-- 2 · Heart hands together -->
-            <div class="card reveal">
-                <div class="card-img-wrap">
-                    <img src="img/foto2.jpeg" alt="Corazón con las manos juntas" loading="lazy" />
-                    <div class="card-overlay">
-                        <span class="overlay-emoji">💜</span>
-                        <p class="overlay-quote">"Un solo corazón hecho entre los dos — eso es exactamente lo nuestro."
-                        </p>
-                    </div>
-                </div>
-                <div class="card-caption">
-                    <p class="card-label">✦ Complicidad total</p>
-                    <h3 class="card-title">Entre tus manos y las mías</h3>
-                    <p class="card-desc">No necesitamos decir nada. Con un gesto así ya lo dijimos todo.</p>
-                    <span class="card-tag">💕 Amigovios</span>
-                </div>
-            </div>
+        .isa-box {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 30px;
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            animation: float 6s ease-in-out infinite;
+        }
 
-            <!-- 3 · Kiss on cheek -->
-            <div class="card reveal">
-                <div class="card-img-wrap">
-                    <img src="img/foto3.jpeg" alt="Beso en la mejilla" loading="lazy" />
-                    <div class="card-overlay">
-                        <span class="overlay-emoji">😊</span>
-                        <p class="overlay-quote">"Esa sonrisa tuya cuando te doy un beso en la mejilla es lo más lindo
-                            que he visto."</p>
-                    </div>
-                </div>
-                <div class="card-caption">
-                    <p class="card-label">✦ El momento más tierno</p>
-                    <h3 class="card-title">Para una mejilla tan suave, un beso tan sincero</h3>
-                    <p class="card-desc">Tu cara cuando sonríes así hace que todo valga la pena.</p>
-                    <span class="card-tag">🥰 Ternura</span>
-                </div>
-            </div>
+        .isa-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold2);
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
 
-            <!-- 4 · Playful couple selfie (pucheros) -->
-            <div class="card reveal">
-                <div class="card-img-wrap">
-                    <img src="img/foto4.jpeg" alt="Selfie juntos haciendo pucheros" loading="lazy" />
-                    <div class="card-overlay">
-                        <span class="overlay-emoji">😘</span>
-                        <p class="overlay-quote">"Contigo hasta los pucheros se ven adorables — eres la única que hace
-                            eso.</p>
-                    </div>
-                </div>
-                <div class="card-caption">
-                    <p class="card-label">✦ La foto más nuestra</p>
-                    <h3 class="card-title">¿Besito? Siempre sí.</h3>
-                    <p class="card-desc">Esa carita que pones… no la cambiaria por nada.</p>
-                    <span class="card-tag">❣️ Besitos</span>
-                </div>
-            </div>
+        .isa-question {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #fff;
+        }
 
-            <!-- 5 · Mirror selfie in striped top -->
-            <div class="card reveal">
-                <div class="card-img-wrap">
-                    <img src="img/foto5.jpeg" alt="Selfie en espejo con top a rayas" loading="lazy" />
-                    <div class="card-overlay">
-                        <span class="overlay-emoji">✨</span>
-                        <p class="overlay-quote">"Cualquier lugar se convierte en set de fotos cuando tú apareces con
-                            ese estilo."</p>
-                    </div>
-                </div>
-                <div class="card-caption">
-                    <p class="card-label">✦ Reina del espejo</p>
-                    <h3 class="card-title">El estilo lo llevas por dentro y por fuera</h3>
-                    <p class="card-desc">No hay espejo que te haga justicia; eres más linda en persona.</p>
-                    <span class="card-tag">🪞 Estilo propio</span>
-                </div>
-            </div>
+        .isa-message {
+            display: none;
+            font-size: 1.15rem;
+            color: #fce7f3;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
 
-            <!-- 6 · Curly hair selfie pouty -->
-            <div class="card reveal">
-                <div class="card-img-wrap">
-                    <img src="img/foto6.jpeg" alt="Selfie con el pelo rizado" loading="lazy" />
-                    <div class="card-overlay">
-                        <span class="overlay-emoji">🌸</span>
-                        <p class="overlay-quote">"Ese puchero tuyo tiene el poder de desarmar cualquier mal día que
-                            tuviera."</p>
-                    </div>
-                </div>
-                <div class="card-caption">
-                    <p class="card-label">✦ Tu cara lo dice todo</p>
-                    <h3 class="card-title">Los rizos y el puchero — combinación mortal</h3>
-                    <p class="card-desc">Esa mezcla de tierna y chistosa es exactamente lo que me mata de ti.</p>
-                    <span class="card-tag">💫 Rizos</span>
-                </div>
-            </div>
+        /* ─── MUSIC BUTTON ─── */
+        .music-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9998;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(135deg, var(--rose), var(--amber));
+            box-shadow: 0 4px 20px rgba(244, 63, 138, .45);
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
 
-            <!-- 7 · Yellow dress fitting room -->
-            <div class="card reveal">
-                <div class="card-img-wrap">
-                    <img src="img/foto7.jpeg" alt="Probando vestido amarillo" loading="lazy" />
-                    <div class="card-overlay">
-                        <span class="overlay-emoji">👗</span>
-                        <p class="overlay-quote">"No es el vestido el que brilla — eres tú quien lo hace brillar."</p>
-                    </div>
-                </div>
-                <div class="card-caption">
-                    <p class="card-label">✦ Todo te queda bien</p>
-                    <h3 class="card-title">Ese vestido te eligió a ti, no al revés</h3>
-                    <p class="card-desc">Cada prenda que te pones gana la lotería. Te ves increíble, como siempre.</p>
-                    <span class="card-tag">❣️ Moda</span>
-                </div>
-            </div>
+        .music-btn:hover {
+            transform: scale(1.12);
+            box-shadow: 0 6px 28px rgba(244, 63, 138, .65);
+        }
 
-            <!-- 8 · Video call smile -->
-            <div class="card reveal">
-                <div class="card-img-wrap">
-                    <img src="img/foto8.jpeg" alt="Videollamada con sonrisa hermosa" loading="lazy" />
-                    <div class="card-overlay">
-                        <span class="overlay-emoji">📱</span>
-                        <p class="overlay-quote">"Esa sonrisa a través de la pantalla hacía hasta las noches más largas
-                            más llevaderas."</p>
-                    </div>
-                </div>
-                <div class="card-caption">
-                    <p class="card-label">✦ La pantalla no te hace justicia</p>
-                    <h3 class="card-title">Ese gesto que me llena el alma</h3>
-                    <p class="card-desc">Ni la distancia, ni la pantalla podían esconder lo bonita que te ves cuando
-                        me haces esos gestos que tanto amo ❣️.</p>
-                    <span class="card-tag">🌟 Energía positiva</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        /* ─── HEART SECTION ─── */
+        .heart-section {
+            padding: 60px 20px 100px;
+            display: flex;
+            justify-content: center;
+        }
 
-    <!-- ═══ PROMISE LETTER SECTION ═══ -->
-    <section class="promise-section reveal">
-        <div class="promise-wrap">
-            <!-- floating corner hearts -->
-            <div class="promise-float-heart pf1">💗</div>
-            <div class="promise-float-heart pf2">🌹</div>
-            <div class="promise-float-heart pf3">💕</div>
-            <div class="promise-float-heart pf4">✨</div>
+        .heart-box {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 30px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
 
-            <div class="promise-card">
-                <!-- wax seal -->
-                <div class="promise-seal">💌</div>
+        .heart-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--gold2);
+        }
 
-                <p class="promise-eyebrow">✦ Una carta para ti ✦</p>
-                <h2 class="promise-heading">¿Qué si prometo <em>amarte?</em></h2>
+        .heart-art {
+            margin-top: 30px;
+            font-family: monospace;
+            font-size: 8px;
+            line-height: 1;
+            color: red;
+            white-space: pre;
+            display: none;
+            text-align: left;
+            margin: 20px auto;
+            width: fit-content;
+        }
 
-                <div class="promise-divider">
-                    <span></span>
-                    <i>❤️</i>
-                    <span></span>
-                </div>
+        .heart-ok {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #9ca3af;
+            display: none;
+        }
 
-                <div class="promise-body">
-                    <p>
-                        Si este amor sigue tan <span class="promise-highlight">duradero y fuerte</span> como en aquel
-                        día
-                        que nos dijimos que nos amábamos, acompañados de un beso que llenaba nuestros corazones de
-                        alegrías, amor y la intención más clara y sencilla de <span class="promise-highlight">amor hacia
-                            el otro</span>.
-                    </p>
-                    <br>
-                    <p>
-                        Si ese amor nos perdura hasta nuestros últimos días, si amar y preocuparse por el otro
-                        se vuelve <span class="promise-highlight">algo natural y espontáneo</span>, si cada día nuestro
-                        amor crece continuamente, si cada día vamos a demostrar de <span class="promise-highlight">mil
-                            maneras</span>
-                        cuánto nos importa el otro…
-                    </p>
-                </div>
+        @media (max-width: 500px) {
+            .heart-art {
+                font-size: 5px;
+            }
+        }
 
-                <div class="promise-divider" style="margin-top: 32px;">
-                    <span></span>
-                    <i>🌹</i>
-                    <span></span>
-                </div>
+        .isa-btns,
+        .heart-btns {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
 
-                <div class="promise-final">
-                    …entonces sí,
-                    <strong>prometo amarte toda la vida,<br>o hasta que el corazón te brinde amor tan sincero como la
-                        verdad absoluta. ❣️</strong>
-                </div>
+        .isa-btn,
+        .hbtn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-width: 100px;
+        }
 
-                <p class="promise-signature">— De Carlo</p>
-            </div>
-        </div>
-    </section>
+        .ibtn-si,
+        .hbtn-yes {
+            background: linear-gradient(135deg, var(--gold2), var(--amber));
+            color: var(--darker);
+            box-shadow: 0 4px 15px rgba(245, 197, 24, 0.3);
+        }
 
-    <!-- ═══ GANADORA SECTION ═══ -->
-    <section class="winner-section reveal">
-        <div class="winner-box" id="winnerBox">
-            <!-- Decorations -->
-            <div class="winner-dec-flower flower-1">🌼</div>
-            <div class="winner-dec-flower flower-2">🌻</div>
-            <div class="winner-dec-flower flower-3">🌼</div>
-            <div class="winner-dec-heart heart-1">💖</div>
-            <div class="winner-dec-heart heart-2">💕</div>
-            <div class="winner-dec-heart heart-3">💗</div>
-            <!-- End Decorations -->
+        .ibtn-si:hover,
+        .hbtn-yes:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(245, 197, 24, 0.5);
+        }
 
-            <h2 class="winner-title" id="winnerTitle">La ganadora del puesto número 1 es:</h2>
-            <div class="winner-loader" id="winnerLoader">
-                <div class="spinner"></div>
-                <div class="winner-loading-text">Cargando...</div>
-            </div>
-            <div class="winner-message" id="winnerMessage">
-                La ganadora del puesto número 1 de mi corazón es:
-                <span class="winner-focus">isabela Quiñonez González ❣️</span>
-            </div>
-        </div>
-    </section>
+        .ibtn-no,
+        .hbtn-no {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
 
-    <!-- ═══ TIMER SECTION ═══ -->
-    <section class="timer-section reveal">
-        <div class="timer-box">
-            <h2 class="timer-title">llevas en mi corazón desde:<br><span>16 de agosto de 2025</span> ❤️</h2>
-            <div id="contador"></div>
-        </div>
-    </section>
+        .ibtn-no:hover,
+        .hbtn-no:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
 
-    <!-- ═══ WAITING TIMER SECTION ═══ -->
-    <section class="timer-section reveal">
-        <div class="timer-box">
-            <h2 class="timer-title">esperando que llegaras a mi vida desde:<br><span>30 de agosto de 2008</span> ❤️</h2>
-            <div id="contador2"></div>
-        </div>
-    </section>
+        .flower-1 {
+            top: -20px;
+            left: -20px;
+            animation-delay: 0s;
+            transform: rotate(-15deg);
+        }
 
-    <!-- ═══════════ CLOSING ═══════════ -->
-    <section class="closing">
-        <h2 class="reveal">
-            Hoy celebro a la mujer<br>que me hace mejor persona
-        </h2>
-        <p class="reveal">
-            No sé cómo llamar exactamente lo que somos, pero sé que eres
-            de las pocas personas en las que confío con todo. Feliz día, hermosa.
-            Ojalá siempre tengas recuerdos, alegrias, y sonrisas tan bonitas como las tuyas.
-        </p>
-        <div class="closing-hearts">isabela❣️</div>
-    </section>
+        .flower-2 {
+            bottom: -15px;
+            right: -25px;
+            animation-delay: 1s;
+            font-size: 2.5rem;
+            transform: rotate(15deg);
+        }
 
-    <!-- ═══ ISA SECTION ─── -->
-    <section class="isa-section reveal">
-        <div class="isa-box" id="isaBox">
-            <h2 class="isa-title">Para Isabelita ❤️</h2>
-            <div class="isa-content">
-                <p class="isa-question" id="isaQuestion">Isa, ¿me quieres? ❤️</p>
-                <div class="isa-btns" id="isaBtns">
-                    <button class="isa-btn ibtn-si" id="isaBtnSi">Sí 💛</button>
-                    <button class="isa-btn ibtn-no" id="isaBtnNo">No 💔</button>
-                </div>
-                <div class="isa-message" id="isaMessage"></div>
-            </div>
-        </div>
-    </section>
+        .flower-3 {
+            top: 40%;
+            left: -30px;
+            animation-delay: 2s;
+            font-size: 1.8rem;
+        }
 
-    <!-- ═══ CORAZÓN INTERACTIVO ═══ -->
-    <section class="heart-section reveal">
-        <div class="heart-box" id="heartBox">
-            <p class="heart-question">¿Quieres un corazón? ❣️</p>
-            <div class="heart-btns">
-                <button class="hbtn hbtn-yes" id="btnSi">Sí 💛</button>
-                <button class="hbtn hbtn-no" id="btnNo">No 💔</button>
-            </div>
-            <pre class="heart-art" id="heartArt"></pre>
-            <p class="heart-ok" id="heartOk"></p>
-        </div>
-    </section>
+        .winner-dec-heart {
+            position: absolute;
+            font-size: 1.5rem;
+            color: var(--rose);
+            filter: drop-shadow(0 2px 4px rgba(244, 63, 138, 0.4));
+            animation: floatUpSlow 3s ease-in-out infinite alternate;
+            z-index: -1;
+        }
 
-    <!-- ═══════════ FLOWER GIFT SECTION ═══════════ -->
-    <style>
-        /* ── gift section ── */
+        .heart-1 {
+            top: -30px;
+            right: 10%;
+            animation-delay: 0.5s;
+            font-size: 1.8rem;
+        }
+
+        .heart-2 {
+            bottom: -20px;
+            left: 15%;
+            animation-delay: 1.5s;
+            font-size: 1.2rem;
+        }
+
+        .heart-3 {
+            top: 20%;
+            right: -25px;
+            animation-delay: 2.5s;
+            font-size: 2rem;
+        }
+
+        @keyframes gentleSway {
+            to {
+                transform: translateY(-8px) rotate(5deg);
+            }
+        }
+
+        @keyframes floatUpSlow {
+            to {
+                transform: translateY(-12px) scale(1.1);
+            }
+        }
+
+        /* ─── GIFT SECTION ─── */
         .flower-gift-section {
             padding: 80px 20px 100px;
             display: flex;
@@ -1774,7 +1417,7 @@
             }
         }
 
-        /* ── full-screen flower modal ── */
+        /* ─── FLOWER MODAL ─── */
         .flower-modal {
             display: none;
             position: fixed;
@@ -1927,6 +1570,360 @@
             left: 100%;
         }
     </style>
+</head>
+
+<body>
+    <!-- BOTÓN VOLVER -->
+    <button id="backBtn" class="back-btn" onclick="showView('home')">⬅ Volver al Menú</button>
+
+    <!-- Falling petals -->
+    <div class="petals-wrap" id="petals"></div>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero">
+        <div class="hero-badge"> 8 de Marzo · Día Internacional de la Mujer 🌼</div>
+        <h1 class="hero-title">Feliz Día,<br>Isa ❣️</h1>
+        <p class="hero-sub">
+            Para ti, que con tu sonrisa iluminas hasta los días más ordinarios.
+            Hoy y siempre, celebro lo increíble que eres.
+        </p>
+        <div class="hero-date">★ 8 · 03 · 2026 ★</div>
+        <div class="main-nav">
+            <div class="nav-card" onclick="showView('cartas')">
+                <span class="nav-icon">💌</span>
+                <span class="nav-title">Carta de Promesa</span>
+                <span class="nav-desc">Una promesa de amor para toda la vida.</span>
+            </div>
+            <div class="nav-card" onclick="showView('romanticismo')">
+                <span class="nav-icon">💕</span>
+                <span class="nav-title">Romántico</span>
+                <span class="nav-desc">Nuestros recuerdos y fechas inolvidables.</span>
+            </div>
+            <div class="nav-card" onclick="showView('dedicatoria')">
+                <span class="nav-icon">✨</span>
+                <span class="nav-title">Dedicatoria 8M</span>
+                <span class="nav-desc">Para la mujer más increíble de todas.</span>
+            </div>
+            <div class="nav-card" onclick="showView('flores')">
+                <span class="nav-icon">🌻</span>
+                <span class="nav-title">Flores Amarillas</span>
+                <span class="nav-desc">Un detalle único pensado para ti.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ QUEST ═══════════ -->
+    <section class="quest-section reveal" id="interactive-quest">
+        <div class="quest-box" id="questBox">
+            <div id="questContent">
+                <p class="quest-text" id="questText">Hola corazón ❣️<br>¿Sabes por qué me gustas? 😊</p>
+                <div class="quest-btns" id="questBtns">
+                    <button class="quest-btn btn-primary" onclick="handleQuest('si')">Sí</button>
+                    <button class="quest-btn btn-secondary" onclick="handleQuest('no')">No</button>
+                </div>
+                <ul class="quest-list" id="razonesList">
+                    <li>✨ Eres muy amable y considerada.</li>
+                    <li>✨ Tienes una sonrisa que ilumina mi día.</li>
+                    <li>✨ Me encanta tu sentido del humor.</li>
+                    <li>✨ Eres muy inteligente y creativa.</li>
+                    <li>✨ Siempre sabes cómo hacerme sentir mejor.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SUNFLOWER ═══════════ -->
+    <section class="canvas-container" id="canvasContainer">
+        <h2 class="canvas-title">más formas en las que te demuestro mi amor ❣️</h2>
+        <canvas id="sunflowerCanvas" width="600" height="600"></canvas>
+        <div class="scroll-arrow" style="margin-top: 20px;"
+            onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Ver más ↓</div>
+    </section>
+
+    <!-- ═══ CARNATION ROW ═══ -->
+    <div class="carnations-row" id="carnations-row"></div>
+
+    <!-- ═══════════ GALLERY ═══════════ -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-label reveal">
+            <h2>Momentos que me roban el corazón</h2>
+            <p>Porque entre tú y yo siempre hay algo especial que no tiene nombre exacto… y eso lo hace único.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card featured reveal">
+                <div class="card-img-wrap">
+                    <img src="img/foto1.jpeg" alt="Atardecer mágico en el mar" loading="lazy" />
+                    <div class="card-overlay">
+                        <span class="overlay-emoji">🌅</span>
+                        <p class="overlay-quote">"Contigo, hasta el sol parece que se detiene a mirar lo bonito de este
+                            momento."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <p class="card-label">✦ Nuestro lugar favorito</p>
+                    <h3 class="card-title">El atardecer más bonito fue contigo</h3>
+                    <p class="card-desc">Ese momento con el mar de fondo y el sol hundiéndose lentamente… fue de los que
+                        quedan grabados para siempre.</p>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img-wrap">
+                    <img src="img/foto2.jpeg" alt="Corazón con las manos juntas" loading="lazy" />
+                    <div class="card-overlay">
+                        <span class="overlay-emoji">💜</span>
+                        <p class="overlay-quote">"Un solo corazón hecho entre los dos — eso es exactamente lo nuestro."
+                        </p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h3 class="card-title">Entre tus manos y las mías</h3>
+                    <p class="card-desc">No necesitamos decir nada. Con un gesto así ya lo dijimos todo.</p>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img-wrap">
+                    <img src="img/foto3.jpeg" alt="Beso en la mejilla" loading="lazy" />
+                    <div class="card-overlay">
+                        <span class="overlay-emoji">😊</span>
+                        <p class="overlay-quote">"Esa sonrisa tuya cuando te doy un beso en la mejilla es lo más lindo
+                            que he visto."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h3 class="card-title">Para una mejilla tan suave, un beso tan sincero</h3>
+                    <p class="card-desc">Tu cara cuando sonríes así hace que todo valga la pena.</p>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img-wrap">
+                    <img src="img/foto4.jpeg" alt="Selfie juntos haciendo pucheros" loading="lazy" />
+                    <div class="card-overlay">
+                        <span class="overlay-emoji">😘</span>
+                        <p class="overlay-quote">"Contigo hasta los pucheros se ven adorables — eres la única que hace
+                            eso."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h3 class="card-title">¿Besito? Siempre sí.</h3>
+                    <p class="card-desc">Esa carita que pones… no la cambiaría por nada.</p>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img-wrap">
+                    <img src="img/foto5.jpeg" alt="Selfie en espejo con top a rayas" loading="lazy" />
+                    <div class="card-overlay">
+                        <span class="overlay-emoji">✨</span>
+                        <p class="overlay-quote">"Cualquier lugar se convierte en set de fotos cuando tú apareces con
+                            ese estilo."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h3 class="card-title">El estilo lo llevas por dentro y por fuera</h3>
+                    <p class="card-desc">No hay espejo que te haga justicia; eres más linda en persona.</p>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img-wrap">
+                    <img src="img/foto6.jpeg" alt="Selfie con el pelo rizado" loading="lazy" />
+                    <div class="card-overlay">
+                        <span class="overlay-emoji">🌸</span>
+                        <p class="overlay-quote">"Ese puchero tuyo tiene el poder de desarmar cualquier mal día que
+                            tuviera."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h3 class="card-title">Los rizos y el puchero — combinación mortal</h3>
+                    <p class="card-desc">Esa mezcla de tierna y chistosa es exactamente lo que me mata de ti.</p>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img-wrap">
+                    <img src="img/foto7.jpeg" alt="Probando vestido amarillo" loading="lazy" />
+                    <div class="card-overlay">
+                        <span class="overlay-emoji">👗</span>
+                        <p class="overlay-quote">"No es el vestido el que brilla — eres tú quien lo hace brillar."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h3 class="card-title">Ese vestido te eligió a ti, no al revés</h3>
+                    <p class="card-desc">Cada prenda que te pones gana la lotería. Te ves increíble, como siempre.</p>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img-wrap">
+                    <img src="img/foto8.jpeg" alt="Videollamada con sonrisa hermosa" loading="lazy" />
+                    <div class="card-overlay">
+                        <span class="overlay-emoji">📱</span>
+                        <p class="overlay-quote">"Esa sonrisa a través de la pantalla hacía hasta las noches más largas
+                            más llevaderas."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h3 class="card-title">Ese gesto que me llena el alma</h3>
+                    <p class="card-desc">Ni la distancia, ni la pantalla podían esconder lo bonita que te ves cuando me
+                        haces esos gestos que tanto amo ❣️.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROMISE LETTER ═══ -->
+    <section class="promise-section reveal" id="cartas">
+        <div class="promise-wrap">
+            <div class="promise-float-heart pf1">💗</div>
+            <div class="promise-float-heart pf2">🌹</div>
+            <div class="promise-float-heart pf3">💕</div>
+            <div class="promise-float-heart pf4">✨</div>
+
+            <div class="promise-card">
+                <div class="promise-seal">💌</div>
+                <p class="promise-eyebrow">✦ Una carta para ti ✦</p>
+                <h2 class="promise-heading">¿Qué si prometo <em>amarte?</em></h2>
+
+                <div class="promise-divider"><span></span><i>❤️</i><span></span></div>
+
+                <div class="promise-body">
+                    <p>Si este amor sigue tan <span class="promise-highlight">duradero y fuerte</span> como en aquel día
+                        que nos dijimos que nos amábamos, acompañados de un beso que llenaba nuestros corazones de
+                        alegrías, amor y la intención más clara y sencilla de <span class="promise-highlight">amor hacia
+                            el otro</span>.</p>
+                    <br>
+                    <p>Si ese amor nos perdura hasta nuestros últimos días, si amar y preocuparse por el otro se vuelve
+                        <span class="promise-highlight">algo natural y espontáneo</span>, si cada día nuestro amor crece
+                        continuamente, si cada día vamos a demostrar de <span class="promise-highlight">mil
+                            maneras</span> cuánto nos importa el otro…
+                    </p>
+                </div>
+
+                <div class="promise-divider" style="margin-top: 32px;"><span></span><i>🌹</i><span></span></div>
+
+                <div class="promise-final">
+                    …entonces sí,
+                    <strong>prometo amarte toda la vida,<br>o hasta que el corazón te brinde amor tan sincero como la
+                        verdad absoluta. ❣️</strong>
+                </div>
+
+                <p class="promise-signature">— De Carlo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ WINNER ═══ -->
+    <section class="winner-section reveal">
+        <div class="winner-box" id="winnerBox">
+            <div class="winner-dec-flower flower-1">🌼</div>
+            <div class="winner-dec-flower flower-2">🌻</div>
+            <div class="winner-dec-flower flower-3">🌼</div>
+            <div class="winner-dec-heart heart-1">💖</div>
+            <div class="winner-dec-heart heart-2">💕</div>
+            <div class="winner-dec-heart heart-3">💗</div>
+
+            <h2 class="winner-title" id="winnerTitle">La ganadora del puesto número 1 es:</h2>
+            <div class="winner-loader" id="winnerLoader">
+                <div class="spinner"></div>
+                <div class="winner-loading-text">Cargando...</div>
+            </div>
+            <div class="winner-message" id="winnerMessage">
+                La ganadora del puesto número 1 de mi corazón es:
+                <span class="winner-focus">isabela Quiñonez González ❣️</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ TIMERS ═══ -->
+    <section class="timer-section reveal" id="fechas">
+        <div class="timer-box">
+            <h2 class="timer-title">llevas en mi corazón desde:<br><span>16 de agosto de 2025</span> ❤️</h2>
+            <div id="contador"></div>
+        </div>
+    </section>
+
+    <section class="timer-section reveal">
+        <div class="timer-box">
+            <h2 class="timer-title">esperando que llegaras a mi vida desde:<br><span>30 de agosto de 2008</span> ❤️</h2>
+            <div id="contador2"></div>
+        </div>
+    </section>
+
+    <!-- ═══ ISA ═══ -->
+    <section class="isa-section reveal">
+        <div class="isa-box" id="isaBox">
+            <h2 class="isa-title">Para Isabelita ❤️</h2>
+            <div class="isa-content">
+                <p class="isa-question" id="isaQuestion">Isa, ¿me quieres? ❤️</p>
+                <div class="isa-btns" id="isaBtns">
+                    <button class="isa-btn ibtn-si" id="isaBtnSi">Sí 💛</button>
+                    <button class="isa-btn ibtn-no" id="isaBtnNo">No 💔</button>
+                </div>
+                <div class="isa-message" id="isaMessage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ HEART ═══ -->
+    <section class="heart-section reveal">
+        <div class="heart-box" id="heartBox">
+            <p class="heart-question">¿Quieres un corazón? ❣️</p>
+            <div class="heart-btns">
+                <button class="hbtn hbtn-yes" id="btnSi">Sí 💛</button>
+                <button class="hbtn hbtn-no" id="btnNo">No 💔</button>
+            </div>
+            <pre class="heart-art" id="heartArt"></pre>
+            <p class="heart-ok" id="heartOk"></p>
+        </div>
+    </section>
+
+    <!-- ═══ CLOSING ═══ -->
+    <section class="closing">
+        <h2 class="reveal">Hoy celebro a la mujer<br>que me hace mejor persona</h2>
+        <p class="reveal">
+            No sé cómo llamar exactamente lo que somos, pero sé que eres
+            de las pocas personas en las que confío con todo. Feliz día, hermosa.
+            Ojalá siempre tengas recuerdos, alegrias, y sonrisas tan bonitas como las tuyas.
+        </p>
+        <div class="closing-hearts">isabela❣️</div>
+    </section>
+
+    <!-- ═══ GIFT SECTION ═══ -->
+    <section class="flower-gift-section" id="flowerGift">
+        <div class="gift-box">
+            <div id="giftQuestion">
+                <p class="gift-question">🌼 ¿Hoy es el día de<br><span>las flores amarillas?</span></p>
+                <div class="gift-btns">
+                    <button class="gift-btn gift-btn-yes" onclick="giftAnswer(true)">Sí ✨</button>
+                    <button class="gift-btn gift-btn-no" onclick="giftAnswer(false)">No 🌙</button>
+                </div>
+            </div>
+            <div class="gift-response" id="giftYes">
+                <div class="gift-msg">
+                    <strong>ok, toma tu regalo corazón ❣️</strong>
+                    hay algo especial esperándote...
+                </div>
+                <button class="present-btn" onclick="openFlowerModal()">🎁 &nbsp;Regalo</button>
+            </div>
+            <div class="gift-response" id="giftNo">
+                <div class="gift-msg">
+                    <strong>¿enserio? no importa 🌼</strong>
+                    todo tuyo de igual manera, niña ❣️
+                </div>
+                <button class="present-btn" onclick="openFlowerModal()">🎁 &nbsp;Regalo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOWER MODAL -->
+    <div class="flower-modal" id="flowerModal">
+        <canvas id="flowerAnimationCanvas"></canvas>
+        <button class="modal-close" onclick="closeFlowerModal()">✕ &nbsp;Cerrar</button>
+    </div>
 
     <!-- WELCOME OVERLAY -->
     <div id="welcomeOverlay" class="welcome-overlay">
@@ -1938,156 +1935,89 @@
         </div>
     </div>
 
-    <!-- SECTION HTML -->
-    <section class="flower-gift-section" id="flowerGift">
-        <div class="gift-box">
-            <!-- QUESTION -->
-            <div id="giftQuestion">
-                <p class="gift-question">🌼 ¿Hoy es el día de<br><span>las flores amarillas?</span></p>
-                <div class="gift-btns">
-                    <button class="gift-btn gift-btn-yes" onclick="giftAnswer(true)">Sí ✨</button>
-                    <button class="gift-btn gift-btn-no" onclick="giftAnswer(false)">No 🌙</button>
-                </div>
-            </div>
+    <audio id="bgMusic" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
 
-            <!-- RESPONSE YES -->
-            <div class="gift-response" id="giftYes">
-                <div class="gift-msg">
-                    <strong>ok, toma tu regalo corazón ❣️</strong>
-                    hay algo especial esperándote...
-                </div>
-                <button class="present-btn" onclick="openFlowerModal()">
-                    🎁 &nbsp;Regalo
-                </button>
-            </div>
+    <button class="music-btn" id="musicBtn" title="Play / Pause">▶️</button>
 
-            <!-- RESPONSE NO -->
-            <div class="gift-response" id="giftNo">
-                <div class="gift-msg">
-                    <strong>¿enserio? no importa 🌼</strong>
-                    todo tuyo de igual manera, niña ❣️
-                </div>
-                <button class="present-btn" onclick="openFlowerModal()">
-                    🎁 &nbsp;Regalo
-                </button>
-            </div>
-        </div>
-    </section>
-    <section class="xmas-section" id="cartaNavidad">
-        <div class="xmas-letter">
-            <!-- animated snowflakes inside the card -->
-            <div class="xmas-flakes" id="xmasFlakes"></div>
+    <footer>
+        <p>Hecho por Carlo</p>
+    </footer>
 
-            <div class="xmas-header">
-                <span class="xmas-divider"></span>
-                <span class="xmas-badge">🎄 Navidad 2025</span>
-                <span class="xmas-divider"></span>
-            </div>
-
-            <div class="xmas-seal">💌</div>
-
-            <h2 class="xmas-title">Feliz Navidad, Corazón</h2>
-            <p class="xmas-subtitle">Una carta para Isabela ❣️</p>
-
-            <div class="xmas-pine">🌲&nbsp;&nbsp;❄️&nbsp;&nbsp;🌲</div>
-
-            <div class="xmas-body">
-                <p>Hola.<br>
-                    Seguimos aquí a pesar de todas las cosas, quién lo diría.<br>
-                    Te escribo esto con el poco tiempo que tengo, con la poca paz mental que me queda — créeme que he
-                    escrito más de 1500 letras y me tocó borrarlo porque escribí solo problemas.</p>
-
-                <p>Te deseo un día feliz, un día lleno de nuevas experiencias, una navidad que haga que <span
-                        class="xmas-highlight">ninguna navidad se iguale a esto.</span><br>
-                    Feliz navidad, corazón.</p>
-
-                <p>Mi mente crea un deseo intenso cuando te piensa, algo casi como una necesidad de volver a verte, una
-                    necesidad de volver a sentir tu aroma, una necesidad de volver a sentir tu calor — siendo sincero
-                    nunca creí que fuera posible que mi alma, que mi corazón y que mi cuerpo, a pesar de todas esas
-                    adversidades y todo el cariño creciente hacia esa persona especial, pueda resurgir tan fácilmente.
-                </p>
-
-                <p>3 veces son 3 veces, y en estas 3 veces no te puedes imaginar cuánto cariño y amor sentí, siento y
-                    sentiré por ti y todo lo que me producen:</p>
-
-                <ul class="xmas-list">
-                    <li>cada palabra, cada pequeño gesto, cada regalo, cada foto</li>
-                    <li>cada beso, cada vez que nos miramos a los ojos, cada pico</li>
-                    <li>cada preocupación por el otro, cada muestra de cariño</li>
-                    <li>cada sonrisa que compartimos juntos, cada coqueteo, cada roce</li>
-                    <li>cada hurgada de nariz, cada hurgada de oído, cada mordida</li>
-                    <li>cada agarrón de manos, cada beso robado, cada abrazo</li>
-                    <li>cada momento juntos, cada doble mensaje diciéndome cuánto me extrañas</li>
-                    <li>cada mensaje diciéndome que me quieres, cada momento íntimo</li>
-                    <li>cada pensamiento en ti, cada recuerdo contigo</li>
-                    <li>cada lugar en los que compartimos algo, cada foto juntos</li>
-                </ul>
-
-                <p>Definitivamente para mí se vuelve algo único y hermoso — que cada vez que recuerdo algo de esto pongo
-                    una sonrisa de tonto y me adentro en mi mente de una manera que hace que navegue en un mar tan
-                    profundo, oscuro y denso, que lo único que me salva eres tú. Sí, tú. <span class="xmas-highlight">Tú
-                        eras, eres y serás la luz de mi vida.</span></p>
-
-                <p>He renunciado y cambiado a tantas cosas desde que te conozco… ¿qué es esto de ser meloso? ¿qué es
-                    esto de ser romántico? ¿qué es esto de querer salir con alguien, de mandar besos en llamada, de
-                    hacer textos expresando mis sentimientos?<br>
-                    Me pregunto si todos estos cambios me los hace el no verte, si es porque te extraño, si es que
-                    simplemente estoy cambiando… o si es por lo mucho que te quiero tener cerca de nuevo — sea lo que
-                    sea, estoy seguro de que te lo diría hoy y mil veces más de ser necesario.</p>
-
-                <p>Isabelita, isabela, isa, corazón, mi vida, mi amor — sé que hoy no ha sido tu mejor día con esos
-                    dolores, que cada vez los cólicos son más fuertes y que yo no puedo hacer nada para ayudarte. Ojalá
-                    pudiera estar ahí contigo, de verdad, aunque sea para hacerte sentir un poquito mejor.</p>
-
-                <p>Lo único que sé es que tú eres tan especial, tan delicada y a la vez tan fuerte, que a veces me quedo
-                    pensando en cómo haces para aguantar tanto sin quejarte y buscar la solución a pesar de las
-                    circunstancias.</p>
-
-                <p>Sinceramente para mí, <span class="xmas-highlight">tú eres una mujer única en todos los
-                        sentidos.</span> Tu forma de hablar, tu forma especial de reír, esa mirada tuya que tanto anhelo
-                    ver todos los días… Todo en ti tiene como un hechizo que incluso cuando estás cansada o con
-                    malestar, igual sigues teniendo esa ternura que me desarma por completo.</p>
-
-                <p>Tú tienes una manera tan bonita de ser que a uno le dan ganas de estar ahí cerquita cuidándote,
-                    escuchándote, y haciéndote sonreír, aunque sea un momento.</p>
-
-                <p>Mi corazón se ha enseñado a amarte de una forma tan bonita, que me lastima verte enferma o sufriendo
-                    de alguna manera — aunque a veces no pueda encontrar una salida, mi corazón y mi mente se unen solo
-                    por ti y me motivan a sacar lo mejor de mí solamente para verte feliz. <span
-                        class="xmas-highlight">Tú tienes ese efecto raro en mí.</span></p>
-
-                <p>Mañana te veré en mis pensamientos y la verdad, solo pensar en eso ya me mejora el ánimo — solo de
-                    pensar en que te veré de nuevo. Pero pensar en que no podré tocar tu piel de nuevo, sentir tu aroma
-                    de nuevo, disfrutar tu cariño físico de nuevo, me hace esperar ese domingo sin parar y eso me cambia
-                    la perspectiva de mis días sin darme cuenta…</p>
-
-                <p>Trata de no esforzarte mucho en tu salida de más rato, avísame cuando llegues de nuevo a casa, y yo
-                    sigo aquí, queriéndote cada día un poquito más sin que yo mismo me dé cuenta — porque, en fin, <span
-                        class="xmas-highlight">¿cómo puedo dejar de pensarte y dejar de quererte cuando lo único que
-                        quiero es a mi niña?</span></p>
-
-                <p>Puede que para tus gustos no cuadre o no se iguale a un regalo de navidad, pero esto es todo lo que
-                    te puedo dar en este momento.<br>
-                    Aún no puedo entender cómo pude llegar a quererte tanto. Puede que no valga para ti, puede que sea
-                    algo más del montón, algo más que leer, algo más que olvidar… pero para mí <span
-                        class="xmas-highlight">abre mi alma, mente y corazón en un solo instante.</span></p>
-            </div>
-
-            <div class="xmas-closing">
-                <p class="xmas-love">Te amo, Isabela</p>
-                <span class="xmas-heart">❣️</span>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- FLOWER MODAL -->
-    <div class="flower-modal" id="flowerModal">
-        <canvas id="flowerAnimationCanvas"></canvas>
-        <button class="modal-close" onclick="closeFlowerModal()">✕ &nbsp;Cerrar</button>
-    </div>
-
+    <!-- ═══════════════════════════════════════════
+         SCRIPTS — todo en un solo bloque, orden correcto
+    ═══════════════════════════════════════════ -->
     <script>
+        // ─────────────────────────────────────────
+        // 1. VARIABLES GLOBALES
+        // ─────────────────────────────────────────
+
+        // Canciones por módulo — GLOBAL para que showView() las vea
+        const moduleSongs = {
+            'cartas': 'prometofonseca.mp3',
+            'romanticismo': 'personafavorita.mp3',
+            'dedicatoria': 'incondicional.mp3',
+            'flores': 'musica.mp3'
+        };
+
+        let isPlaying = false;
+
+        // ─────────────────────────────────────────
+        // 2. FUNCIÓN showView — GLOBAL
+        // ─────────────────────────────────────────
+        window.showView = function (viewName) {
+            // Oculta todas las secciones
+            document.querySelectorAll('[data-view]').forEach(el => {
+                el.style.display = 'none';
+            });
+
+            // Muestra solo las de la vista actual
+            document.querySelectorAll(`[data-view="${viewName}"]`).forEach(el => {
+                el.style.display = '';
+            });
+
+            // Botón Volver
+            const backBtn = document.getElementById('backBtn');
+            if (backBtn) {
+                backBtn.style.display = (viewName === 'home') ? 'none' : 'flex';
+            }
+
+            // ── Música por módulo ──
+            const bgMusic = document.getElementById('bgMusic');
+            const musicBtn = document.getElementById('musicBtn');
+
+            // ── Segundos de inicio por canción ──
+            const songStarts = {
+                'cartas': 0,   // prometofonseca.mp3  — cambia este número
+                'romanticismo': 60,   // personafavorita.mp3 — cambia este número
+                'dedicatoria': 20,   // incondicional.mp3   — cambia este número
+                'flores': 0    // musica.mp3          — cambia este número
+            };
+
+            if (moduleSongs[viewName]) {
+                const songFile = moduleSongs[viewName];
+                // Solo cambia si es una canción distinta a la que ya suena
+                if (!bgMusic.src.endsWith(songFile)) {
+                    bgMusic.src = songFile;
+                    bgMusic.currentTime = songStarts[viewName] ?? 0;
+                }
+                bgMusic.play().catch(e => console.log('Reproducción automática bloqueada:', e));
+                if (musicBtn) musicBtn.textContent = '⏸️';
+                isPlaying = true;
+            } else if (viewName === 'home') {
+                bgMusic.pause();
+                if (musicBtn) musicBtn.textContent = '▶️';
+                isPlaying = false;
+            }
+
+            // Scroll al tope
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        };
+
+        // ─────────────────────────────────────────
+        // 3. FUNCIONES GLOBALES DEL REGALO
+        // ─────────────────────────────────────────
         function giftAnswer(yes) {
             document.getElementById('giftQuestion').style.display = 'none';
             if (yes) {
@@ -2099,20 +2029,17 @@
 
         function openFlowerModal() {
             const modal = document.getElementById('flowerModal');
+            const bgMusic = document.getElementById('bgMusic');
             modal.classList.add('open');
             document.body.style.overflow = 'hidden';
             if (typeof window.startSpecialFlower === 'function') window.startSpecialFlower();
 
-            // --- Reproducir canción en el apartado regalo ---
-            // AQUÍ PUEDES CAMBIAR EL SEGUNDO DONDE INICIA LA CANCIÓN (Ej: bgMusic.currentTime = 30)
-            const bgMusic = document.getElementById('bgMusic');
             if (bgMusic) {
-                bgMusic.currentTime = 80; // Cambia este 0 por el segundo deseado
-                bgMusic.play().catch(e => console.error("Audio play failed:", e));
-
+                bgMusic.currentTime = 80;
+                bgMusic.play().catch(e => console.error('Audio play failed:', e));
                 const musicBtn = document.getElementById('musicBtn');
                 if (musicBtn) musicBtn.textContent = '⏸️';
-                if (typeof isPlaying !== 'undefined') isPlaying = true;
+                isPlaying = true;
             }
         }
 
@@ -2123,81 +2050,132 @@
             if (typeof window.stopSpecialFlower === 'function') window.stopSpecialFlower();
         }
 
-        // Close on backdrop click
-        document.getElementById('flowerModal').addEventListener('click', function (e) {
-            if (e.target === this) closeFlowerModal();
-        });
-    </script>
+        // ─────────────────────────────────────────
+        // 4. DOM CONTENT LOADED — setup inicial
+        // ─────────────────────────────────────────
+        document.addEventListener('DOMContentLoaded', () => {
 
+            // Mapeo de vistas
+            const viewMapping = {
+                'home': ['.hero'],
+                'cartas': ['#cartas'],
+                'romanticismo': ['#gallery', '.timer-section'],
+                'flores': ['#flowerGift', '#canvasContainer', '#carnations-row'],
+                'dedicatoria': ['#interactive-quest', '.winner-section', '.closing', '.isa-section', '.heart-section']
+            };
 
-    <footer>
-        <p>Hecho por Carlo</p>
-    </footer>
+            // Asigna data-view a cada elemento
+            for (const [viewName, selectors] of Object.entries(viewMapping)) {
+                selectors.forEach(selector => {
+                    document.querySelectorAll(selector).forEach(el => {
+                        el.setAttribute('data-view', viewName);
+                    });
+                });
+            }
 
-    <script>
-        // ── Generate petals / flower bits ──
-        const wrap = document.getElementById('petals');
-        for (let i = 0; i < 18; i++) {
-            const p = document.createElement('div');
-            p.className = 'petal';
-            p.style.left = Math.random() * 100 + 'vw';
-            p.style.animationDuration = (8 + Math.random() * 10) + 's';
-            p.style.animationDelay = (Math.random() * 16) + 's';
-            p.style.width = (8 + Math.random() * 10) + 'px';
-            p.style.height = (12 + Math.random() * 14) + 'px';
-            p.style.opacity = 0.2 + Math.random() * 0.3;
-            wrap.appendChild(p);
-        }
+            // Arranca en el home
+            showView('home');
 
-        // ── Generate CSS carnations row ──
-        const carnationSVG = (delay) => {
-            const el = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-            el.setAttribute('viewBox', '0 0 60 110');
-            el.classList.add('carnation-svg');
-            el.style.animationDelay = delay + 's';
-            el.innerHTML = `
-            <rect x="28" y="55" width="4" height="55" rx="2" fill="#4a7c3f"/>
-            <ellipse cx="22" cy="80" rx="10" ry="5" fill="#5a9e4a" transform="rotate(-30 22 80)"/>
-            <ellipse cx="38" cy="90" rx="10" ry="5" fill="#5a9e4a" transform="rotate(30 38 90)"/>
-            <ellipse cx="30" cy="35" rx="14" ry="10" fill="#f5c518" opacity="0.9" transform="rotate(0 30 35)"/>
-            <ellipse cx="30" cy="35" rx="14" ry="10" fill="#ffe044" opacity="0.85" transform="rotate(40 30 35)"/>
-            <ellipse cx="30" cy="35" rx="14" ry="10" fill="#ffb700" opacity="0.85" transform="rotate(80 30 35)"/>
-            <ellipse cx="30" cy="35" rx="14" ry="10" fill="#f5c518" opacity="0.85" transform="rotate(120 30 35)"/>
-            <ellipse cx="30" cy="35" rx="14" ry="10" fill="#ffe044" opacity="0.85" transform="rotate(160 30 35)"/>
-            <ellipse cx="30" cy="33" rx="9" ry="7" fill="#fff176" opacity="0.95" transform="rotate(20 30 33)"/>
-            <ellipse cx="30" cy="33" rx="9" ry="7" fill="#ffe87a" opacity="0.9" transform="rotate(70 30 33)"/>
-            <ellipse cx="30" cy="33" rx="9" ry="7" fill="#fff176" opacity="0.9" transform="rotate(120 30 33)"/>
-            <circle cx="30" cy="32" r="5" fill="#ffcc00"/>
-            <circle cx="30" cy="32" r="3" fill="#fff8dc"/>
-            `;
-            return el;
-        };
-        const row = document.getElementById('carnations-row');
-        for (let i = 0; i < 14; i++) {
-            row.appendChild(carnationSVG((i * 0.3) % 4));
-        }
+            // ── Petals ──
+            const wrap = document.getElementById('petals');
+            for (let i = 0; i < 18; i++) {
+                const p = document.createElement('div');
+                p.className = 'petal';
+                p.style.left = Math.random() * 100 + 'vw';
+                p.style.animationDuration = (8 + Math.random() * 10) + 's';
+                p.style.animationDelay = (Math.random() * 16) + 's';
+                p.style.width = (8 + Math.random() * 10) + 'px';
+                p.style.height = (12 + Math.random() * 14) + 'px';
+                p.style.opacity = 0.2 + Math.random() * 0.3;
+                wrap.appendChild(p);
+            }
 
-        // ── Scroll reveal ──
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('visible');
-                    observer.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.12 });
+            // ── Carnations ──
+            const carnationSVG = (delay) => {
+                const el = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                el.setAttribute('viewBox', '0 0 60 110');
+                el.classList.add('carnation-svg');
+                el.style.animationDelay = delay + 's';
+                el.innerHTML = `
+                    <rect x="28" y="55" width="4" height="55" rx="2" fill="#4a7c3f"/>
+                    <ellipse cx="22" cy="80" rx="10" ry="5" fill="#5a9e4a" transform="rotate(-30 22 80)"/>
+                    <ellipse cx="38" cy="90" rx="10" ry="5" fill="#5a9e4a" transform="rotate(30 38 90)"/>
+                    <ellipse cx="30" cy="35" rx="14" ry="10" fill="#f5c518" opacity="0.9"/>
+                    <ellipse cx="30" cy="35" rx="14" ry="10" fill="#ffe044" opacity="0.85" transform="rotate(40 30 35)"/>
+                    <ellipse cx="30" cy="35" rx="14" ry="10" fill="#ffb700" opacity="0.85" transform="rotate(80 30 35)"/>
+                    <ellipse cx="30" cy="35" rx="14" ry="10" fill="#f5c518" opacity="0.85" transform="rotate(120 30 35)"/>
+                    <ellipse cx="30" cy="35" rx="14" ry="10" fill="#ffe044" opacity="0.85" transform="rotate(160 30 35)"/>
+                    <ellipse cx="30" cy="33" rx="9" ry="7" fill="#fff176" opacity="0.95" transform="rotate(20 30 33)"/>
+                    <ellipse cx="30" cy="33" rx="9" ry="7" fill="#ffe87a" opacity="0.9" transform="rotate(70 30 33)"/>
+                    <ellipse cx="30" cy="33" rx="9" ry="7" fill="#fff176" opacity="0.9" transform="rotate(120 30 33)"/>
+                    <circle cx="30" cy="32" r="5" fill="#ffcc00"/>
+                    <circle cx="30" cy="32" r="3" fill="#fff8dc"/>
+                `;
+                return el;
+            };
+            const row = document.getElementById('carnations-row');
+            for (let i = 0; i < 14; i++) row.appendChild(carnationSVG((i * 0.3) % 4));
 
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            // ── Scroll reveal ──
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+                });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // ── Interactive Heart Logic ──
-        const btnSi = document.getElementById('btnSi');
-        const btnNo = document.getElementById('btnNo');
-        const heartArt = document.getElementById('heartArt');
-        const heartOk = document.getElementById('heartOk');
-        const heartQuestion = document.querySelector('.heart-question');
-        const heartBtns = document.querySelector('.heart-btns');
+            // ── Winner ──
+            const winnerBox = document.getElementById('winnerBox');
+            let winnerTriggered = false;
+            const winnerObserver = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting && !winnerTriggered) {
+                        winnerTriggered = true;
+                        setTimeout(() => {
+                            document.getElementById('winnerLoader').style.display = 'none';
+                            document.getElementById('winnerTitle').style.display = 'none';
+                            document.getElementById('winnerMessage').style.display = 'block';
+                        }, 5000);
+                    }
+                });
+            }, { threshold: 0.6 });
+            winnerObserver.observe(winnerBox);
 
-        const heartTemplate = `
+            // ── Timers ──
+            const fechaInicio = new Date('2025-08-16 00:00:00');
+            const fechaEspera = new Date('2008-08-30 00:00:00');
+
+            function getContadorHTML(startDate) {
+                const ahora = new Date();
+                const diferencia = ahora - startDate;
+                const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+                const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+                const segundos = Math.floor((diferencia / 1000) % 60);
+                return `
+                    <div class="time-block"><span class="time-val">${dias}</span><span class="time-label">días</span></div>
+                    <div class="time-block"><span class="time-val">${horas}</span><span class="time-label">horas</span></div>
+                    <div class="time-block"><span class="time-val">${minutos}</span><span class="time-label">minutos</span></div>
+                    <div class="time-block"><span class="time-val">${segundos}</span><span class="time-label">segundos</span></div>
+                `;
+            }
+
+            function actualizarContadores() {
+                document.getElementById('contador').innerHTML = getContadorHTML(fechaInicio);
+                document.getElementById('contador2').innerHTML = getContadorHTML(fechaEspera);
+            }
+            setInterval(actualizarContadores, 1000);
+            actualizarContadores();
+
+            // ── Heart ──
+            const btnSi = document.getElementById('btnSi');
+            const btnNo = document.getElementById('btnNo');
+            const heartArt = document.getElementById('heartArt');
+            const heartOk = document.getElementById('heartOk');
+            const heartQuestion = document.querySelector('.heart-question');
+            const heartBtns = document.querySelector('.heart-btns');
+
+            const heartTemplate = `
     @@@@@@@@@@@@@       @@@@@@@@@@@@@
   @@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@
  @@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@
@@ -2229,256 +2207,228 @@
                  @@@@@@@
                    @@@`;
 
-        btnNo.addEventListener('click', () => {
-            heartQuestion.style.display = 'none';
-            heartBtns.style.display = 'none';
-            heartOk.textContent = 'ok';
-            heartOk.style.display = 'block';
-        });
+            btnNo.addEventListener('click', () => {
+                heartQuestion.style.display = 'none';
+                heartBtns.style.display = 'none';
+                heartOk.textContent = 'ok';
+                heartOk.style.display = 'block';
+            });
 
-        btnSi.addEventListener('click', () => {
-            const nombreInput = prompt("Nombre de tu persona especial:", "Isa");
-            const nombre = nombreInput ? nombreInput.trim() : "Isa";
+            btnSi.addEventListener('click', () => {
+                const nombreInput = prompt('Nombre de tu persona especial:', 'Isa');
+                const nombre = nombreInput ? nombreInput.trim() : 'Isa';
+                heartQuestion.style.display = 'none';
+                heartBtns.style.display = 'none';
+                heartArt.style.display = 'block';
 
-            heartQuestion.style.display = 'none';
-            heartBtns.style.display = 'none';
-            heartArt.style.display = 'block';
+                let romantizado = heartTemplate;
+                let i = 0;
+                while (romantizado.includes('@')) {
+                    romantizado = romantizado.replace('@', nombre[i % nombre.length]);
+                    i++;
+                }
 
-            let romantizado = heartTemplate;
-            let i = 0;
-            while (romantizado.includes('@')) {
-                romantizado = romantizado.replace('@', nombre[i % nombre.length]);
-                i++;
-            }
+                const lines = romantizado.split('\n');
+                let currentLine = 0;
+                const printLine = () => {
+                    if (currentLine < lines.length) {
+                        heartArt.textContent += lines[currentLine] + '\n';
+                        currentLine++;
+                        setTimeout(printLine, 100);
+                    } else {
+                        const msg = document.createElement('p');
+                        msg.style.marginTop = '20px';
+                        msg.style.color = 'var(--gold2)';
+                        msg.style.fontWeight = '600';
+                        msg.textContent = `Te quiero mucho ${nombre}! ❣️`;
+                        document.getElementById('heartBox').appendChild(msg);
+                    }
+                };
+                printLine();
+            });
 
-            // Animate line by line
-            const lines = romantizado.split('\n');
-            let currentLine = 0;
+            // ── Isa ──
+            const isaQuestion = document.getElementById('isaQuestion');
+            const isaBtns = document.getElementById('isaBtns');
+            const isaBtnSi = document.getElementById('isaBtnSi');
+            const isaBtnNo = document.getElementById('isaBtnNo');
+            const isaMessage = document.getElementById('isaMessage');
+            let isStepTwo = false;
 
-            const printLine = () => {
-                if (currentLine < lines.length) {
-                    heartArt.textContent += lines[currentLine] + '\n';
-                    currentLine++;
-                    setTimeout(printLine, 100);
+            isaBtnSi.addEventListener('click', () => {
+                if (!isStepTwo) {
+                    isaQuestion.style.display = 'none';
+                    isaBtns.style.display = 'none';
+                    isaMessage.innerHTML = `
+                        <p style="font-weight:600;color:var(--gold2);display:block;margin-bottom:10px;">🌹 Para mi Isa</p>
+                        eso esta muy bien.<br>mañana le doy un beso 😘.
+                    `;
+                    isaMessage.style.display = 'block';
                 } else {
-                    const msg = document.createElement('p');
-                    msg.style.marginTop = '20px';
-                    msg.style.color = 'var(--gold2)';
-                    msg.style.fontWeight = '600';
-                    msg.textContent = `Te quiero mucho ${nombre}! ❣️`;
-                    document.getElementById('heartBox').appendChild(msg);
+                    isaQuestion.style.display = 'none';
+                    isaBtns.style.display = 'none';
+                    isaMessage.innerHTML = `
+                        <p style="font-weight:600;color:var(--gold2);display:block;margin-bottom:10px;">💖 Isabela, me haces muy feliz</p>
+                        Cada día contigo es especial, me encanta tu forma de ser, tu sonrisa y lo mucho que iluminas mis días.<br>
+                        Gracias por ser tú, por quererme y por dejarme quererte. ❤️
+                    `;
+                    isaMessage.style.display = 'block';
+                }
+            });
+
+            isaBtnNo.addEventListener('click', () => {
+                if (!isStepTwo) {
+                    isStepTwo = true;
+                    isaQuestion.innerHTML = '¿Y me quieres mucho? 💕';
+                } else {
+                    isaQuestion.style.display = 'none';
+                    isaBtns.style.display = 'none';
+                    isaMessage.innerHTML = `
+                        <p style="font-weight:600;color:#9ca3af;display:block;margin-bottom:10px;">🧸 Bueno...</p>
+                        Igual te quiero un montón, aunque digas que no.
+                    `;
+                    isaMessage.style.display = 'block';
+                }
+            });
+
+            // ── Questionnaire ──
+            let questStep = 1;
+            const questText = document.getElementById('questText');
+            const questBtns = document.getElementById('questBtns');
+
+            window.handleQuest = function (ans) {
+                if (questStep === 1) {
+                    if (ans === 'si') {
+                        questText.innerHTML = '¡Me alegra que lo sepas! 😊<br>pero apuesto a que no las sabes todas... 😉<br>Déjame contarte:';
+                    } else {
+                        questText.innerHTML = 'Déjame contarte algunas razones...';
+                    }
+                    document.getElementById('razonesList').style.display = 'block';
+                    questBtns.innerHTML = `<button class="quest-btn btn-primary" onclick="handleQuest('next1')">Siguiente</button>`;
+                    questStep = 2;
+
+                } else if (questStep === 2) {
+                    questText.innerHTML = '¿Quieres saber qué más me gusta de ti? 😊';
+                    document.getElementById('razonesList').style.display = 'none';
+                    questBtns.innerHTML = `
+                        <button class="quest-btn btn-primary" onclick="handleQuest('gusto_si')">Sí</button>
+                        <button class="quest-btn btn-secondary" onclick="handleQuest('gusto_no')">No</button>
+                    `;
+                    questStep = 3;
+
+                } else if (questStep === 3) {
+                    if (ans === 'gusto_si') {
+                        questText.innerHTML = '¿Estamos en horario familiar? 😇';
+                        questBtns.innerHTML = `
+                            <button class="quest-btn btn-primary" onclick="handleQuest('familia_si')">Sí</button>
+                            <button class="quest-btn btn-secondary" onclick="handleQuest('familia_no')">No</button>
+                        `;
+                    } else {
+                        questText.innerHTML = '¡AJJAJA, sabía que dirías eso! 😂<br>¿Lista? (si/no):';
+                        questBtns.innerHTML = `
+                            <button class="quest-btn btn-primary" onclick="handleQuest('lista_si')">Sí</button>
+                            <button class="quest-btn btn-secondary" onclick="handleQuest('lista_no')">No</button>
+                        `;
+                    }
+                    questStep = 4;
+
+                } else if (questStep === 4) {
+                    if (ans === 'familia_si') {
+                        questText.innerHTML = 'Es una lástima que no pueda decírtelo ahora mismo entonces... 😔<br>Pero mira esto:';
+                        questBtns.innerHTML = `<button class="quest-btn btn-primary" onclick="showSunflower()">Continuar ❤️</button>`;
+                    } else if (ans === 'familia_no' || ans === 'lista_si') {
+                        questText.innerHTML = `
+                            1. me encanta tu mirada<br>
+                            2. me encanta tu sonrisa<br>
+                            3. me encanta tus pucheros<br>
+                            4. me encanta cuando te pones melosa<br>
+                            5. me encanta como te acaricio<br>
+                            6. me encanta todo de ti ❤️
+                        `;
+                        questBtns.innerHTML = `
+                            <p style="margin-top:20px;color:#fff;">¿Quieres que suba el nivel a más morboso? 😉</p>
+                            <div class="quest-btns">
+                                <button class="quest-btn btn-primary" onclick="handleQuest('morboso_si')">Sí</button>
+                                <button class="quest-btn btn-secondary" onclick="handleQuest('morboso_no')">No</button>
+                            </div>
+                        `;
+                    } else {
+                        questText.innerHTML = 'Está bien, lo dejamos aquí por ahora 😊';
+                        questBtns.innerHTML = `<button class="quest-btn btn-primary" onclick="showSunflower()">Continuar ❤️</button>`;
+                    }
+                    questStep = 5;
+
+                } else if (questStep === 5) {
+                    if (ans === 'morboso_si') {
+                        questText.innerHTML = `
+                            7. me encanta tu cuerpo<br>
+                            8. me encanta tu piel<br>
+                            9. me encanta cuando me dejas besarte<br>
+                            10. me encanta cuando me dejas tocarte<br>
+                            11. me encanta cuando me robas besos<br>
+                            12. me encanta cuando me besas el cuello<br>
+                            13. me encanta cuando me manoseas.... AJAJJAJA
+                        `;
+                    } else {
+                        questText.innerHTML = '¡Está bien! Lo guardo para después 😉';
+                    }
+                    questBtns.innerHTML = `<button class="quest-btn btn-primary" onclick="showSunflower()">Continuar ❤️</button>`;
                 }
             };
 
-            printLine();
-        });
+            window.showSunflower = function () {
+                document.getElementById('interactive-quest').style.display = 'none';
+                const container = document.getElementById('canvasContainer');
+                container.style.display = 'flex';
+                container.scrollIntoView({ behavior: 'smooth' });
+                drawSunflower();
+            };
 
-        // ── Isabelita Interaction Logic ──
-        const isaQuestion = document.getElementById('isaQuestion');
-        const isaBtns = document.getElementById('isaBtns');
-        const isaBtnSi = document.getElementById('isaBtnSi');
-        const isaBtnNo = document.getElementById('isaBtnNo');
-        const isaMessage = document.getElementById('isaMessage');
+            // ── Welcome overlay ──
+            const welcomeOverlay = document.getElementById('welcomeOverlay');
+            const btnEntrar = document.getElementById('btnEntrar');
+            const bgMusic = document.getElementById('bgMusic');
+            const musicBtn = document.getElementById('musicBtn');
 
-        let isStepTwo = false;
-
-        isaBtnSi.addEventListener('click', () => {
-            if (!isStepTwo) {
-                // Step 1: "Si" to "Isa, ¿me quieres?"
-                isaQuestion.style.display = 'none';
-                isaBtns.style.display = 'none';
-                isaMessage.innerHTML = `
-                    <p style="font-weight: 600; color: var(--gold2); display: block; margin-bottom: 10px;">🌹 Para mi Isa</p>
-                    eso esta muy bien.<br>
-                    mañana le doy un beso 😘. 
-                `;
-                isaMessage.style.display = 'block';
-            } else {
-                // Step 2: "Si" to "¿Y me quieres mucho?"
-                isaQuestion.style.display = 'none';
-                isaBtns.style.display = 'none';
-                isaMessage.innerHTML = `
-                    <p style="font-weight: 600; color: var(--gold2); display: block; margin-bottom: 10px;">💖 Isabela, me haces muy feliz</p>
-                    Cada día contigo es especial, me encanta tu forma de ser, tu sonrisa y lo mucho que iluminas mis días.<br>
-                    Gracias por ser tú, por quererme y por dejarme quererte. ❤️
-                `;
-                isaMessage.style.display = 'block';
-            }
-        });
-
-        isaBtnNo.addEventListener('click', () => {
-            if (!isStepTwo) {
-                // Step 1: "No" to "Isa, ¿me quieres?" -> Go to Step 2
-                isStepTwo = true;
-                isaQuestion.innerHTML = "¿Y me quieres mucho? 💕";
-                isaBtnSi.textContent = "Sí";
-                isaBtnNo.textContent = "No";
-            } else {
-                // Step 2: "No" to "¿Y me quieres mucho?"
-                isaQuestion.style.display = 'none';
-                isaBtns.style.display = 'none';
-                isaMessage.innerHTML = `
-                    <p style="font-weight: 600; color: #9ca3af; display: block; margin-bottom: 10px;">🧸 Bueno...</p>
-                    Igual te quiero un montón, aunque digas que no.
-                `;
-                isaMessage.style.display = 'block';
-            }
-        });
-
-        // ── Winner Interaction Logic ──
-        const winnerBox = document.getElementById('winnerBox');
-        let winnerTriggered = false;
-
-        const winnerObserver = new IntersectionObserver(entries => {
-            entries.forEach(e => {
-                if (e.isIntersecting && !winnerTriggered) {
-                    winnerTriggered = true;
-                    // Start 5 second timer when section becomes visible
-                    setTimeout(() => {
-                        document.getElementById('winnerLoader').style.display = 'none';
-                        document.getElementById('winnerTitle').style.display = 'none';
-                        document.getElementById('winnerMessage').style.display = 'block';
-                    }, 5000);
+            musicBtn.addEventListener('click', () => {
+                if (isPlaying) {
+                    bgMusic.pause();
+                    musicBtn.textContent = '▶️';
+                } else {
+                    bgMusic.play().catch(e => console.error('Audio play failed:', e));
+                    musicBtn.textContent = '⏸️';
                 }
+                isPlaying = !isPlaying;
             });
-        }, { threshold: 0.6 });
 
-        winnerObserver.observe(winnerBox);
+            btnEntrar.addEventListener('click', () => {
+                welcomeOverlay.style.opacity = '0';
+                setTimeout(() => { welcomeOverlay.style.display = 'none'; }, 800);
+                // No arrancamos música aquí — showView('home') no la pone, el usuario navega y la activa
+            });
 
-        // ── Timer Logic ──
-        const fechaInicio = new Date("2025-08-16 00:00:00");
-        const fechaEspera = new Date("2008-08-30 00:00:00");
+            // ── Modal close on backdrop ──
+            document.getElementById('flowerModal').addEventListener('click', function (e) {
+                if (e.target === this) closeFlowerModal();
+            });
+        });
 
-        function getContadorHTML(startDate) {
-            const ahora = new Date();
-            const diferencia = ahora - startDate;
-
-            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-            const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
-            const segundos = Math.floor((diferencia / 1000) % 60);
-
-            return `
-                <div class="time-block"><span class="time-val">${dias}</span><span class="time-label">días</span></div>
-                <div class="time-block"><span class="time-val">${horas}</span><span class="time-label">horas</span></div>
-                <div class="time-block"><span class="time-val">${minutos}</span><span class="time-label">minutos</span></div>
-                <div class="time-block"><span class="time-val">${segundos}</span><span class="time-label">segundos</span></div>
-            `;
-        }
-
-        function actualizarContadores() {
-            document.getElementById("contador").innerHTML = getContadorHTML(fechaInicio);
-            document.getElementById("contador2").innerHTML = getContadorHTML(fechaEspera);
-        }
-
-        setInterval(actualizarContadores, 1000);
-        actualizarContadores();
-
-        // ── Interactive Questionnaire Logic (Python translation) ──
-        let questStep = 1;
-        const questText = document.getElementById('questText');
-        const questBtns = document.getElementById('questBtns');
-
-        function handleQuest(ans) {
-            if (questStep === 1) {
-                if (ans === 'si') {
-                    questText.innerHTML = "¡Me alegra que lo sepas! 😊<br>pero apuesto a que no las sabes todas... 😉<br>Déjame contarte:";
-                } else {
-                    questText.innerHTML = "Déjame contarte algunas razones...";
-                }
-                document.getElementById('razonesList').style.display = 'block';
-                questBtns.innerHTML = `<button class="quest-btn btn-primary" onclick="handleQuest('next1')">Siguiente</button>`;
-                questStep = 2;
-            } else if (questStep === 2) {
-                questText.innerHTML = "¿Quieres saber qué más me gusta de ti? 😊";
-                document.getElementById('razonesList').style.display = 'none';
-                questBtns.innerHTML = `
-                    <button class="quest-btn btn-primary" onclick="handleQuest('gusto_si')">Sí</button>
-                    <button class="quest-btn btn-secondary" onclick="handleQuest('gusto_no')">No</button>
-                `;
-                questStep = 3;
-            } else if (questStep === 3) {
-                if (ans === 'gusto_si') {
-                    questText.innerHTML = "¿Estamos en horario familiar? 😇";
-                    questBtns.innerHTML = `
-                        <button class="quest-btn btn-primary" onclick="handleQuest('familia_si')">Sí</button>
-                        <button class="quest-btn btn-secondary" onclick="handleQuest('familia_no')">No</button>
-                    `;
-                } else {
-                    questText.innerHTML = "¡AJJAJA, sabía que dirías eso! 😂<br>¿Lista? (si/no):";
-                    questBtns.innerHTML = `
-                        <button class="quest-btn btn-primary" onclick="handleQuest('lista_si')">Sí</button>
-                        <button class="quest-btn btn-secondary" onclick="handleQuest('lista_no')">No</button>
-                    `;
-                }
-                questStep = 4;
-            } else if (questStep === 4) {
-                if (ans === 'familia_si') {
-                    questText.innerHTML = "Es una lástima que no pueda decírtelo ahora mismo entonces... 😔<br>Pero mira esto:";
-                    questBtns.innerHTML = `<button class="quest-btn btn-primary" onclick="showSunflower()">Continuar ❤️</button>`;
-                } else if (ans === 'familia_no' || ans === 'lista_si') {
-                    questText.innerHTML = `
-                        1. me encanta tu mirada<br>
-                        2. me encanta tu sonrisa<br>
-                        3. me encanta tus pucheros<br>
-                        4. me encanta cuando te pones melosa<br>
-                        5. me encanta como te acaricio<br>
-                        6. me encanta todo de ti ❤️
-                    `;
-                    questBtns.innerHTML = `
-                        <p style="margin-top:20px; color:#fff;">¿Quieres que suba el nivel a más morboso? 😉 (si/no):</p>
-                        <div class="quest-btns">
-                            <button class="quest-btn btn-primary" onclick="handleQuest('morboso_si')">Sí</button>
-                            <button class="quest-btn btn-secondary" onclick="handleQuest('morboso_no')">No</button>
-                        </div>
-                    `;
-                } else {
-                    questText.innerHTML = "Está bien, lo dejamos aquí por ahora 😊";
-                    questBtns.innerHTML = `<button class="quest-btn btn-primary" onclick="showSunflower()">Continuar ❤️</button>`;
-                }
-                questStep = 5;
-            } else if (questStep === 5) {
-                if (ans === 'morboso_si') {
-                    questText.innerHTML = `
-                        7. me encanta tu cuerpo<br>
-                        8. me encanta tu piel<br>
-                        9. me encanta cuando me dejas besarte<br>
-                        10. me encanta cuando me dejas tocarte<br>
-                        11. me encanta cuando me robas besos<br>
-                        12. me encanta cuando me besas el cuello<br>
-                        13. me encanta cuando me manoseas.... AJAJJAJA
-                    `;
-                } else {
-                    questText.innerHTML = "¡Está bien! Lo guardo para después 😉";
-                }
-                questBtns.innerHTML = `<button class="quest-btn btn-primary" onclick="showSunflower()">Continuar ❤️</button>`;
-            }
-        }
-
-        function showSunflower() {
-            document.getElementById('interactive-quest').style.display = 'none';
-            const container = document.getElementById('canvasContainer');
-            container.style.display = 'flex';
-            container.scrollIntoView({ behavior: 'smooth' });
-            drawSunflower();
-        }
-
-        // ── Sunflower Canvas Logic (Turtle Translation) ──
+        // ─────────────────────────────────────────
+        // 5. SUNFLOWER CANVAS
+        // ─────────────────────────────────────────
         function drawSunflower() {
             const canvas = document.getElementById('sunflowerCanvas');
             const ctx = canvas.getContext('2d');
             const centerX = canvas.width / 2;
             const centerY = canvas.height / 2;
 
-            ctx.fillStyle = "black";
+            ctx.fillStyle = 'black';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            // Draw stem
-            ctx.fillStyle = "green";
             const stemGradient = ctx.createLinearGradient(centerX - 10, centerY, centerX + 10, centerY);
-            stemGradient.addColorStop(0, "#2d5a27");
-            stemGradient.addColorStop(0.5, "#4a7c3f");
-            stemGradient.addColorStop(1, "#2d5a27");
+            stemGradient.addColorStop(0, '#2d5a27');
+            stemGradient.addColorStop(0.5, '#4a7c3f');
+            stemGradient.addColorStop(1, '#2d5a27');
             ctx.fillStyle = stemGradient;
             ctx.fillRect(centerX - 8, centerY + 50, 16, 250);
 
@@ -2494,79 +2444,54 @@
                     const y = centerY + r * Math.sin(theta);
 
                     if (i < 170) {
-                        // Center Seeds
-                        ctx.fillStyle = i % 2 === 0 ? "#4b3017" : "#6b4423";
-                        ctx.beginPath();
-                        ctx.arc(x, y, 4, 0, Math.PI * 2);
-                        ctx.fill();
-
-                        // Subtle highlight
-                        ctx.fillStyle = "rgba(255,255,255,0.1)";
-                        ctx.beginPath();
-                        ctx.arc(x - 1, y - 1, 1, 0, Math.PI * 2);
-                        ctx.fill();
+                        ctx.fillStyle = i % 2 === 0 ? '#4b3017' : '#6b4423';
+                        ctx.beginPath(); ctx.arc(x, y, 4, 0, Math.PI * 2); ctx.fill();
+                        ctx.fillStyle = 'rgba(255,255,255,0.1)';
+                        ctx.beginPath(); ctx.arc(x - 1, y - 1, 1, 0, Math.PI * 2); ctx.fill();
                     } else {
-                        // Petals
-                        ctx.save();
-                        ctx.translate(x, y);
-                        ctx.rotate(theta + Math.PI / 2);
-
+                        ctx.save(); ctx.translate(x, y); ctx.rotate(theta + Math.PI / 2);
                         const petalGradient = ctx.createLinearGradient(0, 0, 0, -80);
-                        petalGradient.addColorStop(0, "#ffb700");
-                        petalGradient.addColorStop(0.4, "#f5c518");
-                        petalGradient.addColorStop(1, "#ffe044");
-
+                        petalGradient.addColorStop(0, '#ffb700');
+                        petalGradient.addColorStop(0.4, '#f5c518');
+                        petalGradient.addColorStop(1, '#ffe044');
                         ctx.fillStyle = petalGradient;
                         ctx.beginPath();
                         ctx.moveTo(0, 0);
                         ctx.bezierCurveTo(-15, -40, -10, -80, 0, -90);
                         ctx.bezierCurveTo(10, -80, 15, -40, 0, 0);
-                        ctx.shadowBlur = 10;
-                        ctx.shadowColor = "rgba(0,0,0,0.3)";
-                        ctx.fill();
-                        ctx.restore();
+                        ctx.shadowBlur = 10; ctx.shadowColor = 'rgba(0,0,0,0.3)';
+                        ctx.fill(); ctx.restore();
                     }
                     i++;
                     setTimeout(() => requestAnimationFrame(animateSeeds), 10);
-                } else {
-                    // Final text reveal or something
-                    ctx.font = "bold 24px Arial";
-                    ctx.fillStyle = "white";
-                    ctx.textAlign = "center";
-                    ctx.shadowBlur = 10;
-                    ctx.shadowColor = "red";
-                    // ctx.fillText("más formas en las que te demuestro mi amor ❤️", centerX, centerY + 250);
                 }
             }
             animateSeeds();
         }
     </script>
+
+    <!-- ─────────────────────────────────────────
+         6. FLOWER ANIMATION (modal)
+    ───────────────────────────────────────── -->
     <script>
         (function () {
             const canvas = document.getElementById('flowerAnimationCanvas');
             if (!canvas) return;
             const ctx = canvas.getContext('2d');
             let animFrameId = null;
-
-            let W = 0; let H = 0; let groundY = 0;
+            let W = 0, H = 0, groundY = 0;
             let flowers, carnations, stars, flies, blades, pollens;
 
             const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
             const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
             const easeOut = t => 1 - (1 - t) * (1 - t);
 
-            const PHASES = {
-                stars: 1.5, soil: 1.0, stems: 2.5,
-                leaves: 1.5, petals: 2.0, carnation: 2.2,
-                grass: 2.0, glow: 1.5, text: 2.0,
-            };
+            const PHASES = { stars: 1.5, soil: 1.0, stems: 2.5, leaves: 1.5, petals: 2.0, carnation: 2.2, grass: 2.0, glow: 1.5, text: 2.0 };
             const phaseStart = {};
             let _acc = 0;
             Object.keys(PHASES).forEach(k => { phaseStart[k] = _acc; _acc += PHASES[k]; });
 
-            function phaseT(name, t) {
-                return clamp((t - phaseStart[name]) / PHASES[name], 0, 1);
-            }
+            function phaseT(name, t) { return clamp((t - phaseStart[name]) / PHASES[name], 0, 1); }
 
             let startTime = null;
 
@@ -2583,75 +2508,46 @@
                 ];
 
                 carnations = [
-                    { x: W * 0.14, baseY: groundY, height: H * 0.23, scale: 0.82, lean: -18, delay: 0.0 },
+                    { x: W * 0.14, baseY: groundY, height: H * 0.23, scale: 0.82, lean: -18, delay: 0.00 },
                     { x: W * 0.87, baseY: groundY, height: H * 0.20, scale: 0.74, lean: 20, delay: 0.15 },
                     { x: W * 0.38, baseY: groundY, height: H * 0.17, scale: 0.60, lean: -6, delay: 0.30 },
                     { x: W * 0.63, baseY: groundY, height: H * 0.16, scale: 0.58, lean: 8, delay: 0.45 },
                 ];
 
-                stars = Array.from({ length: 100 }, () => ({
-                    x: Math.random() * W, y: Math.random() * groundY * 0.87,
-                    r: Math.random() * 1.6 + 0.2, phase: Math.random() * Math.PI * 2,
-                    bright: Math.random() * 0.5 + 0.5,
-                }));
-
-                flies = Array.from({ length: 22 }, () => ({
-                    x: Math.random() * W * 0.85 + W * 0.08, y: Math.random() * (groundY * 0.72) + groundY * 0.12,
-                    vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.25,
-                    phase: Math.random() * Math.PI * 2, r: Math.random() * 2 + 1,
-                }));
-
-                blades = Array.from({ length: 140 }, () => {
-                    const x = Math.random() * W;
-                    const side = x < W / 2 ? -1 : 1;
-                    return {
-                        x, h: Math.random() * H * 0.07 + H * 0.025,
-                        lean: (Math.random() * 32 + 8) * side, w: Math.random() * 3 + 1,
-                        hue: Math.random() * 28 + 108, delay: Math.random() * 0.65,
-                    };
-                });
-
-                pollens = Array.from({ length: 30 }, () => ({
-                    angle: Math.random() * Math.PI * 2, dist: Math.random() * 28 + 8,
-                    size: Math.random() * 2 + 0.5, phase: Math.random() * Math.PI * 2, speed: Math.random() * 0.8 + 0.3,
-                }));
+                stars = Array.from({ length: 100 }, () => ({ x: Math.random() * W, y: Math.random() * groundY * 0.87, r: Math.random() * 1.6 + 0.2, phase: Math.random() * Math.PI * 2, bright: Math.random() * 0.5 + 0.5 }));
+                flies = Array.from({ length: 22 }, () => ({ x: Math.random() * W * 0.85 + W * 0.08, y: Math.random() * (groundY * 0.72) + groundY * 0.12, vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.25, phase: Math.random() * Math.PI * 2, r: Math.random() * 2 + 1 }));
+                blades = Array.from({ length: 140 }, () => { const x = Math.random() * W, side = x < W / 2 ? -1 : 1; return { x, h: Math.random() * H * 0.07 + H * 0.025, lean: (Math.random() * 32 + 8) * side, w: Math.random() * 3 + 1, hue: Math.random() * 28 + 108, delay: Math.random() * 0.65 }; });
+                pollens = Array.from({ length: 30 }, () => ({ angle: Math.random() * Math.PI * 2, dist: Math.random() * 28 + 8, size: Math.random() * 2 + 0.5, phase: Math.random() * Math.PI * 2, speed: Math.random() * 0.8 + 0.3 }));
             }
 
             function drawSky() {
                 const g = ctx.createLinearGradient(0, 0, 0, groundY);
                 g.addColorStop(0, '#000815'); g.addColorStop(0.55, '#090e1c'); g.addColorStop(1, '#121f30');
-                ctx.fillStyle = g;
-                ctx.fillRect(0, 0, W, groundY);
+                ctx.fillStyle = g; ctx.fillRect(0, 0, W, groundY);
             }
 
             function drawStars(t) {
                 const pt = ease(phaseT('stars', t));
                 stars.forEach(s => {
-                    const tw = 0.45 + 0.55 * Math.sin(t * 1.8 + s.phase);
-                    ctx.globalAlpha = pt * s.bright * tw;
-                    ctx.fillStyle = '#ffffff';
+                    const tw = 0.45 + 0.55 * Math.abs(Math.sin(t * 1.8 + s.phase));
+                    ctx.globalAlpha = pt * s.bright * tw; ctx.fillStyle = '#ffffff';
                     ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
                     if (s.bright > 0.8) {
                         ctx.globalAlpha = pt * s.bright * tw * 0.3;
                         const sg = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 4);
                         sg.addColorStop(0, 'rgba(200,220,255,1)'); sg.addColorStop(1, 'rgba(200,220,255,0)');
-                        ctx.fillStyle = sg;
-                        ctx.beginPath(); ctx.arc(s.x, s.y, s.r * 4, 0, Math.PI * 2); ctx.fill();
+                        ctx.fillStyle = sg; ctx.beginPath(); ctx.arc(s.x, s.y, s.r * 4, 0, Math.PI * 2); ctx.fill();
                     }
                 });
                 ctx.globalAlpha = 1;
-
                 const mpt = ease(phaseT('stars', t));
                 ctx.save(); ctx.globalAlpha = mpt * 0.35; ctx.fillStyle = '#d8e8ff';
                 ctx.beginPath(); ctx.arc(W * 0.82, H * 0.08, 22, 0, Math.PI * 2); ctx.fill();
-                ctx.fillStyle = '#060c18';
-                ctx.beginPath(); ctx.arc(W * 0.82 + 8, H * 0.08 - 3, 18, 0, Math.PI * 2); ctx.fill();
-                ctx.restore();
+                ctx.fillStyle = '#060c18'; ctx.beginPath(); ctx.arc(W * 0.82 + 8, H * 0.08 - 3, 18, 0, Math.PI * 2); ctx.fill(); ctx.restore();
             }
 
             function drawSoil(t) {
-                const pt = ease(phaseT('soil', t));
-                const soilH = H - groundY;
+                const pt = ease(phaseT('soil', t)), soilH = H - groundY;
                 const g = ctx.createLinearGradient(0, groundY, 0, H);
                 g.addColorStop(0, '#1c3310'); g.addColorStop(0.18, '#101f08'); g.addColorStop(1, '#060c03');
                 ctx.fillStyle = g; ctx.fillRect(0, groundY, W, soilH * pt);
@@ -2674,14 +2570,12 @@
                     const g = ctx.createLinearGradient(0, 0, 0, -tipH);
                     g.addColorStop(0, `hsl(${b.hue},58%,15%)`); g.addColorStop(0.5, `hsl(${b.hue},65%,28%)`); g.addColorStop(1, `hsl(${b.hue},72%,44%)`);
                     ctx.strokeStyle = g; ctx.lineWidth = b.w; ctx.lineCap = 'round';
-                    ctx.beginPath(); ctx.moveTo(0, 0); ctx.quadraticCurveTo(b.w * 3, -tipH * 0.52, 0, -tipH); ctx.stroke();
-                    ctx.restore();
+                    ctx.beginPath(); ctx.moveTo(0, 0); ctx.quadraticCurveTo(b.w * 3, -tipH * 0.52, 0, -tipH); ctx.stroke(); ctx.restore();
                 });
             }
 
             function drawStem(flower, t) {
-                const pt = ease(phaseT('stems', t));
-                if (pt <= 0) return;
+                const pt = ease(phaseT('stems', t)); if (pt <= 0) return;
                 const { x, baseY, height, scale, lean } = flower;
                 ctx.save(); ctx.translate(x, baseY); ctx.rotate(lean * Math.PI / 180);
                 const h = height * pt;
@@ -2699,8 +2593,7 @@
             function drawLeaf(cx, cy, angle, size, c1, c2) {
                 ctx.save(); ctx.translate(cx, cy); ctx.rotate(angle);
                 const g = ctx.createRadialGradient(0, 0, 0, size * 0.6, 0, size);
-                g.addColorStop(0, c1); g.addColorStop(1, c2);
-                ctx.fillStyle = g;
+                g.addColorStop(0, c1); g.addColorStop(1, c2); ctx.fillStyle = g;
                 ctx.beginPath(); ctx.moveTo(0, 0); ctx.bezierCurveTo(size * 0.55, -size * 0.52, size * 1.12, -size * 0.22, size, 0);
                 ctx.bezierCurveTo(size * 1.12, size * 0.22, size * 0.55, size * 0.52, 0, 0); ctx.fill();
                 ctx.strokeStyle = 'rgba(0,0,0,0.22)'; ctx.lineWidth = 1.2;
@@ -2713,12 +2606,10 @@
             }
 
             function drawLeaves(flower, t) {
-                const pt = ease(phaseT('leaves', t));
-                if (pt <= 0) return;
+                const pt = ease(phaseT('leaves', t)); if (pt <= 0) return;
                 const { x, baseY, height, scale, lean } = flower;
                 ctx.save(); ctx.translate(x, baseY); ctx.rotate(lean * Math.PI / 180);
-                const midY = -height * 0.5;
-                ctx.globalAlpha = pt;
+                const midY = -height * 0.5; ctx.globalAlpha = pt;
                 drawLeaf(-4 * scale, midY, -Math.PI * 0.38, 38 * scale * pt, '#4a8020', '#1e4210');
                 drawLeaf(5 * scale, midY * 0.72, Math.PI * 0.28, 32 * scale * pt, '#3a7018', '#1c3e0e');
                 drawLeaf(-3 * scale, midY * 0.35, -Math.PI * 0.55, 22 * scale * pt, '#44781a', '#1e400e');
@@ -2726,12 +2617,10 @@
             }
 
             function drawPetals(flower, t) {
-                const pt = ease(phaseT('petals', t));
-                if (pt <= 0) return;
+                const pt = ease(phaseT('petals', t)); if (pt <= 0) return;
                 const { x, baseY, height, scale, lean } = flower;
                 ctx.save(); ctx.translate(x, baseY); ctx.rotate(lean * Math.PI / 180);
-                const cy = -height;
-                const nPetals = 8; const pLen = 34 * scale; const pW = 16 * scale;
+                const cy = -height, nPetals = 8, pLen = 34 * scale, pW = 16 * scale;
 
                 for (let i = 0; i < nPetals; i++) {
                     const angle = (i / nPetals) * Math.PI * 2 - Math.PI / 2 + Math.PI / nPetals;
@@ -2752,17 +2641,7 @@
                     ctx.fillStyle = g; ctx.globalAlpha = 1;
                     ctx.beginPath(); ctx.ellipse(pLen * 0.5, 0, pLen * 0.55, pW * 0.44, 0, 0, Math.PI * 2); ctx.fill();
                     ctx.strokeStyle = 'rgba(120,90,0,0.30)'; ctx.lineWidth = 1;
-                    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(pLen * 0.88, 0); ctx.stroke();
-                    ctx.lineWidth = 0.6; ctx.strokeStyle = 'rgba(120,90,0,0.18)';
-                    for (let v = -1; v <= 1; v += 2) {
-                        ctx.beginPath(); ctx.moveTo(pLen * 0.2, 0); ctx.quadraticCurveTo(pLen * 0.4, v * pW * 0.22, pLen * 0.72, v * pW * 0.15); ctx.stroke();
-                    }
-                    ctx.save(); ctx.globalAlpha = 0.35;
-                    const hl = ctx.createRadialGradient(pLen * 0.85, 0, 0, pLen * 0.85, 0, pLen * 0.2);
-                    hl.addColorStop(0, 'rgba(255,255,200,0.9)'); hl.addColorStop(1, 'rgba(255,255,200,0)');
-                    ctx.fillStyle = hl;
-                    ctx.beginPath(); ctx.ellipse(pLen * 0.85, 0, pLen * 0.2, pW * 0.28, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore();
-                    ctx.restore();
+                    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(pLen * 0.88, 0); ctx.stroke(); ctx.restore();
                 }
 
                 ctx.save(); ctx.translate(0, cy);
@@ -2777,8 +2656,7 @@
                     const ppt = (pt - 0.6) / 0.4;
                     pollens.slice(0, flower === flowers[0] ? 30 : 18).forEach((p, i) => {
                         if (i > 10 + 20 * flower.scale) return;
-                        const px2 = Math.cos(p.angle) * p.dist * discR / 18;
-                        const py2 = Math.sin(p.angle) * p.dist * discR / 18;
+                        const px2 = Math.cos(p.angle) * p.dist * discR / 18, py2 = Math.sin(p.angle) * p.dist * discR / 18;
                         ctx.fillStyle = '#e8c030'; ctx.globalAlpha = ppt * 0.85;
                         ctx.beginPath(); ctx.arc(px2, py2, p.size * scale * 0.85, 0, Math.PI * 2); ctx.fill();
                     });
@@ -2789,24 +2667,20 @@
             }
 
             function drawCarnationStem(c, t) {
-                const base = phaseT('carnation', t);
-                const pt = ease(clamp((base - c.delay) / (1 - c.delay), 0, 1));
+                const base = phaseT('carnation', t), pt = ease(clamp((base - c.delay) / (1 - c.delay), 0, 1));
                 if (pt <= 0) return;
                 const h = c.height * pt;
                 ctx.save(); ctx.translate(c.x, c.baseY); ctx.rotate(c.lean * Math.PI / 180);
-
                 const g = ctx.createLinearGradient(0, 0, 0, -h);
                 g.addColorStop(0, '#163006'); g.addColorStop(0.5, '#28540e'); g.addColorStop(1, '#366a18');
                 ctx.strokeStyle = g; ctx.lineWidth = 5 * c.scale; ctx.lineCap = 'round';
                 ctx.beginPath(); ctx.moveTo(0, 0); ctx.bezierCurveTo(6 * c.scale, -h * 0.25, -6 * c.scale, -h * 0.6, 0, -h); ctx.stroke();
-
                 if (pt > 0.7) {
                     const bpt = (pt - 0.7) / 0.3; ctx.globalAlpha = bpt; ctx.fillStyle = '#2a5a10';
                     for (let i = 0; i < 5; i++) {
                         const ba = (i / 5) * Math.PI * 2;
                         ctx.save(); ctx.translate(0, -h); ctx.rotate(ba);
-                        ctx.beginPath(); ctx.moveTo(0, 0);
-                        ctx.quadraticCurveTo(8 * c.scale, -8 * c.scale, 12 * c.scale, -2 * c.scale);
+                        ctx.beginPath(); ctx.moveTo(0, 0); ctx.quadraticCurveTo(8 * c.scale, -8 * c.scale, 12 * c.scale, -2 * c.scale);
                         ctx.quadraticCurveTo(8 * c.scale, 2 * c.scale, 0, 0); ctx.fill(); ctx.restore();
                     }
                     ctx.globalAlpha = 1;
@@ -2817,8 +2691,7 @@
             function drawCarnationLeaf(cx, cy, ang, len, sc) {
                 ctx.save(); ctx.translate(cx, cy); ctx.rotate(ang);
                 const g = ctx.createLinearGradient(0, -len * 0.2, len, len * 0.2);
-                g.addColorStop(0, '#3a7218'); g.addColorStop(1, '#1a4008');
-                ctx.fillStyle = g;
+                g.addColorStop(0, '#3a7218'); g.addColorStop(1, '#1a4008'); ctx.fillStyle = g;
                 ctx.beginPath(); ctx.moveTo(0, 0);
                 ctx.bezierCurveTo(len * 0.3, -len * 0.3, len * 0.8, -len * 0.2, len, -len * 0.05);
                 ctx.bezierCurveTo(len * 0.8, len * 0.1, len * 0.3, len * 0.2, 0, 0); ctx.fill();
@@ -2827,27 +2700,22 @@
             }
 
             function drawCarnationLeaves(c, t) {
-                const base = phaseT('carnation', t);
-                const pt = ease(clamp((base - c.delay) / (1 - c.delay), 0, 1));
+                const base = phaseT('carnation', t), pt = ease(clamp((base - c.delay) / (1 - c.delay), 0, 1));
                 if (pt < 0.4) return;
-                const lpt = (pt - 0.4) / 0.6; const h = c.height;
+                const lpt = (pt - 0.4) / 0.6, h = c.height;
                 ctx.save(); ctx.translate(c.x, c.baseY); ctx.rotate(c.lean * Math.PI / 180);
                 ctx.globalAlpha = ease(lpt);
                 drawCarnationLeaf(-3 * c.scale, -h * 0.45, -Math.PI * 0.3, 28 * c.scale * ease(lpt), c.scale);
-                drawCarnationLeaf(3 * c.scale, -h * 0.6, Math.PI * 0.25, 22 * c.scale * ease(lpt), c.scale);
+                drawCarnationLeaf(3 * c.scale, -h * 0.60, Math.PI * 0.25, 22 * c.scale * ease(lpt), c.scale);
                 ctx.globalAlpha = 1; ctx.restore();
             }
 
             function drawCarnationHead(c, t) {
-                const base = phaseT('carnation', t);
-                const pt = ease(clamp((base - c.delay) / (1 - c.delay), 0, 1));
+                const base = phaseT('carnation', t), pt = ease(clamp((base - c.delay) / (1 - c.delay), 0, 1));
                 if (pt < 0.55) return;
-                const hpt = ease((pt - 0.55) / 0.45);
-                const { x, baseY, height, scale, lean } = c;
-
+                const hpt = ease((pt - 0.55) / 0.45), { x, baseY, height, scale, lean } = c;
                 ctx.save(); ctx.translate(x, baseY); ctx.rotate(lean * Math.PI / 180);
                 const cy = -height;
-
                 const rows = [
                     { n: 14, r: 22 * scale, pLen: 14 * scale, pW: 9 * scale, ang: 0, darken: 0.78 },
                     { n: 12, r: 14 * scale, pLen: 13 * scale, pW: 8.5 * scale, ang: Math.PI / 12, darken: 0.90 },
@@ -2857,25 +2725,19 @@
                 rows.forEach(row => {
                     for (let i = 0; i < row.n; i++) {
                         const angle = (i / row.n) * Math.PI * 2 + row.ang;
-                        const px = Math.cos(angle) * row.r; const py = Math.sin(angle) * row.r + cy;
-
+                        const px = Math.cos(angle) * row.r, py = Math.sin(angle) * row.r + cy;
                         ctx.save(); ctx.translate(px, py); ctx.rotate(angle + Math.PI * 0.5); ctx.scale(hpt, hpt);
-
-                        const g = ctx.createLinearGradient(0, 0, 0, -row.pLen);
-                        const bright = row.darken;
+                        const g = ctx.createLinearGradient(0, 0, 0, -row.pLen), bright = row.darken;
                         g.addColorStop(0, `rgba(${Math.round(220 * bright)},${Math.round(180 * bright)},${Math.round(10 * bright)},1)`);
                         g.addColorStop(0.5, `rgba(${Math.round(255 * bright)},${Math.round(215 * bright)},${Math.round(25 * bright)},1)`);
                         g.addColorStop(1, `rgba(${Math.round(240 * bright)},${Math.round(200 * bright)},${Math.round(15 * bright)},1)`);
                         ctx.fillStyle = g;
-
                         ctx.beginPath(); ctx.moveTo(0, 0);
                         ctx.bezierCurveTo(-row.pW * 0.9, -row.pLen * 0.3, -row.pW * 0.5, -row.pLen * 0.8, 0, -row.pLen);
                         ctx.bezierCurveTo(row.pW * 0.5, -row.pLen * 0.8, row.pW * 0.9, -row.pLen * 0.3, 0, 0); ctx.fill();
-
-                        ctx.strokeStyle = `rgba(255,240,180,0.4)`; ctx.lineWidth = 0.8;
+                        ctx.strokeStyle = 'rgba(255,240,180,0.4)'; ctx.lineWidth = 0.8;
                         ctx.beginPath(); ctx.moveTo(-row.pW * 0.3, -row.pLen * 0.55);
                         ctx.quadraticCurveTo(0, -row.pLen * 0.88, row.pW * 0.3, -row.pLen * 0.55); ctx.stroke();
-
                         ctx.globalAlpha = 0.5; ctx.strokeStyle = 'rgba(160,110,0,0.4)'; ctx.lineWidth = 0.6;
                         ctx.beginPath(); ctx.moveTo(-row.pW * 0.15, -row.pLen * 0.88); ctx.lineTo(0, -row.pLen); ctx.lineTo(row.pW * 0.15, -row.pLen * 0.88); ctx.stroke();
                         ctx.globalAlpha = 1; ctx.restore();
@@ -2885,7 +2747,7 @@
                 ctx.save(); ctx.translate(0, cy);
                 for (let i = 0; i < 6; i++) {
                     const ba = (i / 6) * Math.PI * 2;
-                    ctx.save(); ctx.rotate(ba); ctx.scale(hpt, hpt); ctx.fillStyle = `rgba(255,230,50,0.9)`;
+                    ctx.save(); ctx.rotate(ba); ctx.scale(hpt, hpt); ctx.fillStyle = 'rgba(255,230,50,0.9)';
                     ctx.beginPath(); ctx.moveTo(0, 0); ctx.quadraticCurveTo(4 * scale, -9 * scale, 0, -12 * scale);
                     ctx.quadraticCurveTo(-4 * scale, -9 * scale, 0, 0); ctx.fill(); ctx.restore();
                 }
@@ -2893,15 +2755,13 @@
             }
 
             function drawFireflies(t) {
-                const pt = phaseT('glow', t);
-                if (pt <= 0) return;
+                const pt = phaseT('glow', t); if (pt <= 0) return;
                 flies.forEach(f => {
                     f.x += f.vx; f.y += f.vy;
                     f.vx += (Math.random() - 0.5) * 0.06; f.vy += (Math.random() - 0.5) * 0.04;
                     f.vx = clamp(f.vx, -0.65, 0.65); f.vy = clamp(f.vy, -0.55, 0.55);
                     if (f.x < 0) f.x = W; if (f.x > W) f.x = 0;
                     if (f.y < 0) f.y = groundY * 0.8; if (f.y > groundY) f.y = groundY * 0.08;
-
                     const flicker = 0.3 + 0.7 * Math.abs(Math.sin(t * 2.8 + f.phase));
                     ctx.save(); ctx.globalAlpha = pt * flicker * 0.85;
                     const gr = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, f.r * 7);
@@ -2916,33 +2776,19 @@
             document.fonts.ready.then(() => { fontsReady = true; });
 
             function drawText(t) {
-                const raw = phaseT('text', t);
-                if (raw <= 0 || !fontsReady) return;
+                const raw = phaseT('text', t); if (raw <= 0 || !fontsReady) return;
                 const pt = Math.min(1, 1 - Math.pow(1 - raw, 3));
-                const tx = W / 2; const ty = H * 0.10; const size = Math.round(W * 0.125);
-
+                const tx = W / 2, ty = H * 0.10, size = Math.round(W * 0.125);
                 ctx.save(); ctx.globalAlpha = pt; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
                 ctx.font = `italic 700 ${size}px 'Playfair Display', serif`;
-
                 ctx.save(); ctx.shadowColor = 'rgba(255,160,20,0.55)'; ctx.shadowBlur = 40; ctx.fillStyle = 'rgba(255,160,20,0.18)';
-                ctx.fillText('Feliz día \u2763\ufe0f', tx, ty); ctx.restore();
-
+                ctx.fillText('Feliz día ❣️', tx, ty); ctx.restore();
                 ctx.save(); ctx.shadowColor = 'rgba(255,230,80,0.9)'; ctx.shadowBlur = 14; ctx.fillStyle = 'rgba(255,230,80,0.30)';
-                ctx.fillText('Feliz día \u2763\ufe0f', tx, ty); ctx.restore();
-
+                ctx.fillText('Feliz día ❣️', tx, ty); ctx.restore();
                 const grad = ctx.createLinearGradient(tx - size * 2.0, ty - size * 0.45, tx + size * 2.0, ty + size * 0.45);
                 grad.addColorStop(0, '#8a5c00'); grad.addColorStop(0.15, '#d4a020'); grad.addColorStop(0.38, '#ffe980');
                 grad.addColorStop(0.50, '#fff5b0'); grad.addColorStop(0.65, '#e8b820'); grad.addColorStop(0.85, '#c07800'); grad.addColorStop(1, '#f0d040');
-                ctx.fillStyle = grad; ctx.fillText('Feliz día \u2763\ufe0f', tx, ty);
-
-                if (raw < 1) {
-                    const sweepPct = raw; const sweepX = tx - size * 1.9 + sweepPct * size * 3.8;
-                    const sg = ctx.createLinearGradient(sweepX - 70, 0, sweepX + 70, 0);
-                    sg.addColorStop(0, 'rgba(255,255,220,0)'); sg.addColorStop(0.5, 'rgba(255,255,220,0.75)'); sg.addColorStop(1, 'rgba(255,255,220,0)');
-                    ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.globalAlpha = pt * 0.65; ctx.fillStyle = sg;
-                    ctx.fillText('Feliz día \u2763\ufe0f', tx, ty); ctx.restore();
-                }
-                ctx.restore();
+                ctx.fillStyle = grad; ctx.fillText('Feliz día ❣️', tx, ty); ctx.restore();
             }
 
             function draw(ts) {
@@ -2967,289 +2813,6 @@
                 if (animFrameId) { cancelAnimationFrame(animFrameId); animFrameId = null; }
             };
         })();
-    </script>
-
-    <!-- ─── CHRISTMAS LETTER SECTION ─── -->
-    <style>
-        /* ─── CHRISTMAS LETTER ─── */
-        .xmas-section {
-            position: relative;
-            z-index: 1;
-            padding: 80px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .xmas-letter {
-            background: linear-gradient(160deg, #0d2212 0%, #0a1a0e 60%, #091209 100%);
-            border: 1px solid rgba(198, 160, 60, 0.35);
-            border-radius: 28px;
-            max-width: 720px;
-            width: 100%;
-            padding: 60px 50px 50px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(198, 160, 60, 0.12), inset 0 0 80px rgba(255, 255, 255, 0.02);
-        }
-
-        @media (max-width: 600px) {
-            .xmas-letter {
-                padding: 40px 24px 36px;
-            }
-        }
-
-        /* corner ornaments */
-        .xmas-letter::before,
-        .xmas-letter::after {
-            content: '❄';
-            position: absolute;
-            font-size: 5rem;
-            opacity: 0.05;
-            pointer-events: none;
-        }
-
-        .xmas-letter::before {
-            top: -10px;
-            left: -10px;
-        }
-
-        .xmas-letter::after {
-            bottom: -10px;
-            right: -10px;
-            transform: rotate(45deg);
-        }
-
-        /* snowflake bg pattern */
-        .xmas-flakes {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            overflow: hidden;
-            border-radius: 28px;
-        }
-
-        .xflake {
-            position: absolute;
-            top: -40px;
-            color: #fff;
-            opacity: 0;
-            font-size: 1rem;
-            animation: xfall linear infinite;
-            user-select: none;
-        }
-
-        @keyframes xfall {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0.18;
-            }
-
-            100% {
-                transform: translateY(110%) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* header bar */
-        .xmas-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-            margin-bottom: 36px;
-        }
-
-        .xmas-divider {
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(198, 160, 60, 0.5), transparent);
-        }
-
-        .xmas-badge {
-            background: linear-gradient(135deg, #1a6b2a, #0d4b1d);
-            border: 1px solid rgba(198, 160, 60, 0.4);
-            border-radius: 50px;
-            padding: 6px 20px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #c6a03c;
-        }
-
-        /* wax seal */
-        .xmas-seal {
-            width: 64px;
-            height: 64px;
-            background: radial-gradient(circle at 40% 35%, #c0392b, #7b1a14);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin: 0 auto 32px;
-            box-shadow: 0 4px 20px rgba(192, 57, 43, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.15);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            animation: sealPulse 3s ease-in-out infinite;
-        }
-
-        @keyframes sealPulse {
-
-            0%,
-            100% {
-                box-shadow: 0 4px 20px rgba(192, 57, 43, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.15);
-            }
-
-            50% {
-                box-shadow: 0 4px 32px rgba(192, 57, 43, 0.8), inset 0 2px 4px rgba(255, 255, 255, 0.15);
-            }
-        }
-
-        /* title */
-        .xmas-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8rem, 5vw, 2.8rem);
-            text-align: center;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #c6a03c, #ffe17a, #c6a03c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-
-        .xmas-subtitle {
-            text-align: center;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.35);
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-        }
-
-        /* letter body */
-        .xmas-body {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            line-height: 1.9;
-            color: rgba(255, 255, 255, 0.82);
-        }
-
-        .xmas-body p {
-            margin-bottom: 22px;
-        }
-
-        .xmas-body .xmas-highlight {
-            color: #ffe17a;
-            font-style: italic;
-        }
-
-        .xmas-body .xmas-list {
-            margin: 0 0 22px 0;
-            padding-left: 0;
-            list-style: none;
-            border-left: 3px solid rgba(198, 160, 60, 0.35);
-            padding-left: 20px;
-        }
-
-        .xmas-body .xmas-list li {
-            padding: 3px 0;
-            color: rgba(255, 255, 255, 0.78);
-        }
-
-        .xmas-body .xmas-list li::before {
-            content: '✦ ';
-            color: #c6a03c;
-            font-size: 0.7rem;
-        }
-
-        /* closing */
-        .xmas-closing {
-            margin-top: 36px;
-            text-align: center;
-            border-top: 1px solid rgba(198, 160, 60, 0.2);
-            padding-top: 28px;
-        }
-
-        .xmas-closing .xmas-love {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.35rem;
-            color: #ffe17a;
-            margin-bottom: 6px;
-        }
-
-        .xmas-closing .xmas-heart {
-            font-size: 2rem;
-            animation: pulse 1.8s ease-in-out infinite;
-            display: inline-block;
-        }
-
-        /* pine decorations */
-        .xmas-pine {
-            text-align: center;
-            font-size: 1.6rem;
-            letter-spacing: 6px;
-            margin-bottom: 30px;
-            opacity: 0.7;
-        }
-    </style>
-
-
-    <script>
-        // Snowflakes inside the Christmas letter
-        (function () {
-            const container = document.getElementById('xmasFlakes');
-            const symbols = ['❄', '❅', '❆', '✦', '⁕'];
-            for (let i = 0; i < 18; i++) {
-                const el = document.createElement('span');
-                el.className = 'xflake';
-                el.textContent = symbols[i % symbols.length];
-                el.style.left = (Math.random() * 100) + '%';
-                el.style.fontSize = (0.6 + Math.random() * 0.8) + 'rem';
-                el.style.animationDuration = (6 + Math.random() * 10) + 's';
-                el.style.animationDelay = (Math.random() * 8) + 's';
-                container.appendChild(el);
-            }
-        })();
-    </script>
-
-    <audio id="bgMusic" loop>
-        <source src="musica.mp3" type="audio/mpeg">
-    </audio>
-
-    <button class="music-btn" id="musicBtn" title="Play / Pause">▶️</button>
-
-    <script>
-        const musicBtn = document.getElementById('musicBtn');
-        const bgMusic = document.getElementById('bgMusic');
-        let isPlaying = false;
-
-        musicBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                bgMusic.pause();
-                musicBtn.textContent = '▶️';
-            } else {
-                bgMusic.play().catch(e => console.error("Audio play failed:", e));
-                musicBtn.textContent = '⏸️';
-            }
-            isPlaying = !isPlaying;
-        });
-
-        // Welcome overlay logic
-        const welcomeOverlay = document.getElementById('welcomeOverlay');
-        const btnEntrar = document.getElementById('btnEntrar');
-
-        btnEntrar.addEventListener('click', () => {
-            welcomeOverlay.style.opacity = '0';
-            setTimeout(() => {
-                welcomeOverlay.style.display = 'none';
-            }, 800);
-
-            bgMusic.play().catch(e => console.error("Audio play failed:", e));
-            isPlaying = true;
-            musicBtn.textContent = '⏸️';
-        });
     </script>
 </body>
 
