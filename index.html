@@ -2252,7 +2252,7 @@
                 entries.forEach(e => {
                     if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
                 });
-            }, { threshold: 0.12 });
+            }, { threshold: 0.01 });
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
             // ── Winner ──
