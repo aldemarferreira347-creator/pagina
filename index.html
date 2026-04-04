@@ -2084,7 +2084,7 @@
         // Canciones por módulo — GLOBAL para que showView() las vea
         const moduleSongs = {
             'cartas': 'prometofonseca.mp3',
-            'navidad': 'amorcompleto.mp3',
+            'navidad': 'faltadequerer.mp3',
             'romanticismo': 'personafavorita.mp3',
             'dedicatoria': 'incondicional.mp3',
             'flores': 'musica.mp3'
@@ -2119,10 +2119,10 @@
             // ── Segundos de inicio por canción ──
             const songStarts = {
                 'cartas': 0,   // prometofonseca.mp3  — cambia este número
-                'navidad': 25,  // canción de navidad
+                'navidad': 0,  // canción de navidad
                 'romanticismo': 60,   // personafavorita.mp3 — cambia este número
                 'dedicatoria': 20,   // incondicional.mp3   — cambia este número
-                'flores': 0    // musica.mp3          — cambia este número
+                'flores': 0,    // musica.mp3          — cambia este número
             };
 
             if (moduleSongs[viewName]) {
@@ -2165,7 +2165,7 @@
             if (typeof window.startSpecialFlower === 'function') window.startSpecialFlower();
 
             if (bgMusic) {
-                bgMusic.currentTime = 80;
+                bgMusic.currentTime = 100;
                 bgMusic.play().catch(e => console.error('Audio play failed:', e));
                 const musicBtn = document.getElementById('musicBtn');
                 if (musicBtn) musicBtn.textContent = '⏸️';
